@@ -66,7 +66,7 @@ _Retrieved from GTFS [https://github.com/google/transit/blob/master/gtfs/spec/en
 >* Zip the files in your feed.
 
 ## Field Definitions
-_All "qouted" files are retrieved from GTFS [https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md)
+_All "qouted" files are retrieved from GTFS [https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md)_
 
 >### agency.txt
 
