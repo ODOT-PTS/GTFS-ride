@@ -46,23 +46,24 @@ This specification defines the following files along with their associated conte
 |  [*__rider_info.txt__*](#rider_infotxt) | Optional | Includes anonymized data about specific riders. |
 |  [*__ridership.txt__*](#ridershiptxt) | Optional | Route or Trip level counts of ridership. |
 
-## File Requirements - copied from GTFS spec
+## File Requirements
+_Retrieved from GTFS [https://github.com/google/transit/blob/master/gtfs/spec/en/README.md](https://github.com/google/transit/blob/master/gtfs/spec/en/README.md)_
 
-The following requirements apply to the format and contents of your files:
+>The following requirements apply to the format and contents of your files:
 
-* All files in a General Transit Feed Spec (GTFS) feed must be saved as comma-delimited text.
-* The first line of each file must contain field names. Each subsection of the [Field Definitions](#Field-Definitions) section corresponds to one of the files in a transit feed and lists the field names you may use in that file.
-* All field names are case-sensitive.
-* Field values may not contain tabs, carriage returns or new lines.
-* Field values that contain quotation marks or commas must be enclosed within quotation marks. In addition, each quotation mark in the field value must be preceded with a quotation mark. This is consistent with the manner in which Microsoft Excel outputs comma-delimited (CSV) files. For more information on the CSV file format, see http://tools.ietf.org/html/rfc4180.
-The following example demonstrates how a field value would appear in a comma-delimited file:
+>* All files in a General Transit Feed Spec (GTFS) feed must be saved as comma-delimited text.
+>* The first line of each file must contain field names. Each subsection of the [Field Definitions](#Field-Definitions) section corresponds to one of the files in a transit feed and lists the field names you may use in that file.
+>* All field names are case-sensitive.
+>* Field values may not contain tabs, carriage returns or new lines.
+>* Field values that contain quotation marks or commas must be enclosed within quotation marks. In addition, each quotation mark in the field value must be preceded with a quotation mark. This is consistent with the manner in which Microsoft Excel outputs comma-delimited (CSV) files. For more information on the CSV file format, see http://tools.ietf.org/html/rfc4180.
+>The following example demonstrates how a field value would appear in a comma-delimited file:
   * **Original field value:** `Contains "quotes", commas and text`
   * **Field value in CSV file:** `"Contains ""quotes"", commas and text"`
-* Field values must not contain HTML tags, comments or escape sequences.
-* Remove any extra spaces between fields or field names. Many parsers consider the spaces to be part of the value, which may cause errors.
-* Each line must end with a CRLF or LF linebreak character.
-* Files should be encoded in UTF-8 to support all Unicode characters. Files that include the Unicode byte-order mark (BOM) character are acceptable. Please see the [Unicode FAQ](http://unicode.org/faq/utf_bom.html#BOM) for more information on the BOM character and UTF-8.
-* Zip the files in your feed.
+>* Field values must not contain HTML tags, comments or escape sequences.
+>* Remove any extra spaces between fields or field names. Many parsers consider the spaces to be part of the value, which may cause errors.
+>* Each line must end with a CRLF or LF linebreak character.
+>* Files should be encoded in UTF-8 to support all Unicode characters. Files that include the Unicode byte-order mark (BOM) character are acceptable. Please see the [Unicode FAQ](http://unicode.org/faq/utf_bom.html#BOM) for more information on the BOM character and UTF-8.
+>* Zip the files in your feed.
 
 ## Field Definitions
 
