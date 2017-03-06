@@ -1,7 +1,7 @@
 ## GTFS-ride Style Guide
 
 The GTFS-ride specification follows largely the guide of GTFS. As such, the guidance for style shall be the same.
-Retrieved from: (transit/gtfs/spec/en/style-guide.md0)
+Retrieved from: [transit/gtfs/spec/en/style-guide.md](transit/gtfs/spec/en/style-guide.md)
 
 
 ### Route Organization
