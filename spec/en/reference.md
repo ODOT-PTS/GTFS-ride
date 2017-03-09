@@ -59,6 +59,7 @@ _Retrieved from GTFS [https://github.com/google/transit/blob/master/gtfs/spec/en
 >* Zip the files in your feed.
 
 ## Field Definitions
+
 _Only files unique to GTFS-ride are defined below. Definitions for all other files may be found at [https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md)_
 
 ### *__board_alight.txt__*
