@@ -28,13 +28,13 @@ This specification includes the following files along with their associated cont
 
 |  Filename | Required | Defines |
 |  ------ | ------ | ------ |
-|  [agency.txt](#agencytxt) | **Required** | One or more transit agencies that provide the data in this feed. |
-|  [stops.txt](#stopstxt) | **Required** | Individual locations where vehicles pick up or drop off passengers. |
-|  [routes.txt](#routestxt) | **Required** | Transit routes. A route is a group of trips that are displayed to riders as a single service. |
-|  [trips.txt](#tripstxt)  | **Required** | Trips for each route. A trip is a sequence of two or more stops that occurs at a specific time. |
-|  [stop_times.txt](#stop_timestxt)  | **Required** | Times that a vehicle arrives at and departs from individual stops for each trip. |
-|  [calendar.txt](#calendartxt)  | **Required** | Dates for service IDs using a weekly schedule. Specify when service starts and ends, as well as days of the week where service is available. |
-|  [feed_info.txt](#feed_infotxt)  | Optional | Additional information about the feed itself, including publisher, version, and expiration information. |
+|  [agency.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#agencytxt) | **Required** | One or more transit agencies that provide the data in this feed. |
+|  [stops.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stopstxt) | **Required** | Individual locations where vehicles pick up or drop off passengers. |
+|  [routes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#routestxt) | **Required** | Transit routes. A route is a group of trips that are displayed to riders as a single service. |
+|  [trips.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#tripstxt)  | **Required** | Trips for each route. A trip is a sequence of two or more stops that occurs at a specific time. |
+|  [stop_times.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stop_timestxt)  | **Required** | Times that a vehicle arrives at and departs from individual stops for each trip. |
+|  [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt)  | **Required** | Dates for service IDs using a weekly schedule. Specify when service starts and ends, as well as days of the week where service is available. |
+|  [feed_info.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#feed_infotxt)  | Optional | Additional information about the feed itself, including publisher, version, and expiration information. |
 |  [*__board_alight.txt__*](#board_alighttxt) | Optional | Tracks boardings/alightings along with associated information at stop-level. |
 |  [*__rider_info.txt__*](#rider_infotxt) | Optional | Includes anonymized data about specific riders. |
 |  [*__ridership.txt__*](#ridershiptxt) | Optional | Route or Trip level counts of ridership. |
@@ -135,5 +135,5 @@ An agency may use the ridership.txt file to record aggregate level ridership cou
 | count | **Required** | The **count** field contains the count desired for the selected segment of ridership count. |
 | period_start | **Required** | The **period_start** field contains the start in POSIX time (i.e., number of seconds since January 1st 1970 00:00:00 UTC) of time period of time represented. |
 | period_end | **Required** | The **period_end** field contains the start in POSIX time (i.e., number of seconds since January 1st 1970 00:00:00 UTC) of time period of time represented. |
-| route_id | Optional | The **route_id** field contains an ID that uniquely identifies a route. This value is referenced from the [routes.txt](#routestxt) file. |
-| trip_id | Optional | The **trip_id** field contains an ID that uniquely identifies a trip. This value is referenced from the [trips.txt](#tripstxt) file. |
+| route_id | Optional | The **route_id** field contains an ID that uniquely identifies a route. This value is referenced from the [routes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#routestxt) file. |
+| trip_id | Optional | The **trip_id** field contains an ID that uniquely identifies a trip. This value is referenced from the [trips.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#tripstxt) file. |
