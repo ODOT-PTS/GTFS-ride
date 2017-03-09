@@ -24,7 +24,7 @@ _Retrieved from GTFS [https://github.com/google/transit/blob/master/gtfs/spec/en
 
 ## Feed Files
 
-This specification includes the following files along with their associated content. Bolded files unique to GTFS-ride, while the rest reference GTFS files. More information on the GTFS files may be found at [https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md).
+This specification includes the following files along with their associated content. **Bolded** files are unique to GTFS-ride, while the rest reference GTFS files. More information on the GTFS files may be found at [https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md).
 
 |  Filename | Required | Defines |
 |  ------ | ------ | ------ |
