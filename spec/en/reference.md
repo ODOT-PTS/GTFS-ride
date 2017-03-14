@@ -66,7 +66,7 @@ _Only files unique to GTFS-ride are defined below. Definitions for all other fil
 
 File: **Optional**
 
-If an agency collects disaggregate, stop-level ridership data, board_alight.txt may be used to record ridership boarding counts and additional supplementary data. If only more aggregate ridership data is collected, the agency should use ridership.txt to record ridership counts.  It should be noted that unique combinations of stop_id and trip_id will not uniquely define a specific instance in time of arrival and boardings at a stop. Boardings and other counts will be aggregated across dates active as defined by a trip’s service_id. By including an optional timestamp an agency can disaggregate counts to specifics instances of stop arrivals and boardings.
+If an agency collects disaggregate, stop-level ridership data, board_alight.txt may be used to record ridership boarding counts and additional supplementary data. If only more aggregate ridership data is collected, the agency should use ridership.txt to record ridership counts.  It should be noted that unique combinations of stop_id and trip_id will not uniquely define a specific instance in time of arrival and boardings at a stop. Boardings and other counts will be aggregated across dates active as defined by a trip’s service_id. By including an optional timestamp an agency can disaggregate counts to specifics instances of stop arrivals and boardings, and provide a calculated current load.
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
@@ -80,6 +80,7 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | wheelchair_alightings | Optional | The **wheelchair_alightings** field contains the number of wheelchair alightings at the identified stop and trip. |
 | capacity | Optional | The **capacity** field contains the total capacity of the transit vehicle. |
 | timestamp | Optional | The **timestamp** field contains the time in POSIX time (i.e., number of seconds since January 1st 1970 00:00:00 UTC) of the associated data. |
+| current_load | Optional | The **current_load** field contains a calculated vehicle load at the time indicated in the **timestamp** field. |
 | source | Optional | The **source** field contains the collection method of the associated data. |
 |   |  | * **0** - Manual.  |
 |   |  | * **1** - APC.  |
