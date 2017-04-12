@@ -100,7 +100,6 @@ If an agency has the ability to associate supplementary ridership data with a sp
 | alighting_stop_id | Optional | The **alighting_stop_id** field contains the ID of the alighting stop associated with the unique rider. |
 | boarding_time | Optional | The **boarding_time** field contains the time of the boarding associated with the unique rider. |
 | alighting_time | Optional | The **alighting_time** field contains the time of the alighting associated with the unique rider. |
-| elapsed_time | Optional | The **elapsed_time** field contains the amount of time between the boarding and alighting of the unique rider. |
 | rider_type | Optional | The **rider_type** field contains information on the rider type of the unique rider. |
 |   |  | * **0** - No special rider type.  |
 |   |  | * **1** - Senior.  |
