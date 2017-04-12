@@ -11,7 +11,7 @@ This document explains the types of files that comprise a GTFS-ride dataset and 
 3.  [File Requirements](#file-requirements)
 4.  [Field Definitions](#field-definitions)
     -   [*__board\_alight.txt__*](#board_alighttxt)
-    -   [*__rider\_info.txt__*](#rider_infotxt)
+    -   [*__rider\_trip.txt__*](#rider_infotxt)
     -   [*__ridership.txt__*](#ridershiptxt)
 
 ## Term Definitions
@@ -36,7 +36,7 @@ This specification includes the following files along with their associated cont
 |  [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt)  | **Required** | Dates for service IDs using a weekly schedule. Specify when service starts and ends, as well as days of the week where service is available. |
 |  [feed_info.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#feed_infotxt)  | Optional | Additional information about the feed itself, including publisher, version, and expiration information. |
 |  [*__board_alight.txt__*](#board_alighttxt) | Optional | Tracks boardings/alightings along with associated information at stop-level. |
-|  [*__rider_info.txt__*](#rider_infotxt) | Optional | Includes anonymized data about specific riders. |
+|  [*__rider_trip.txt__*](#rider_triptxt) | Optional | Includes anonymized data about specific riders' trip. |
 |  [*__ridership.txt__*](#ridershiptxt) | Optional | Route or Trip level counts of ridership. |
 
 ## File Requirements
@@ -86,11 +86,11 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 |   |  | * **2** - AFC.  |
 |   |  | * **3** - Model estimation.  |
 
-### *__rider_info.txt__*
+### *__rider_trip.txt__*
 
 File: **Optional**
 
-If an agency has the ability to associate supplementary ridership data with a specific rider, rider_info.txt may be used to record the rider-generated details. Care should be exercised in the creation of the rider_id field to sufficiently anonymize a rider’s identity. The rider_info.txt file may be useful for origin/destination, rider demographic, fare structure, network configuration, transit equity, demand forecasting, and performance review studies. 
+If an agency has the ability to associate supplementary ridership data with a specific rider, rider_trip.txt may be used to record the rider-generated details. Care should be exercised in the creation of the rider_id field to sufficiently anonymize a rider’s identity. The rider_trip.txt file may be useful for origin/destination, rider demographic, fare structure, network configuration, transit equity, demand forecasting, and performance review studies. 
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
