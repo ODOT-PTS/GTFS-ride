@@ -103,11 +103,14 @@ If an agency has the ability to associate supplementary ridership data with a sp
 | rider_type | Optional | The **rider_type** field contains information on the rider type of the unique rider. |
 |   |  | * **0** - No special rider type.  |
 |   |  | * **1** - Senior.  |
-|   |  | * **2** - Youth.  |
-|   |  | * **3** - Disabled.  |
-|   |  | * **4** - Veteran.  |
-|   |  | * **5** - Student.  |
-|   |  | * **6** - Free/Reduced Fare.  |
+|   |  | * **2** - Child.  |
+|   |  | * **3** - Student.  |
+|   |  | * **4** - Youth.  |
+|   |  | * **5** - Disabled.  |
+|   |  | * **6** - Promotional category.  |
+|   |  | * **7** - Military.  |
+|   |  | * **8-11** - Custom categories.  |
+| rider_type_description | Optional | The **rider_type_description** field contains specific descriptions of the employed rider types. |
 | fare_paid | Optional | The **fare_paid** field contains the amount of the fare paid by the unique rider. |
 | fare_method | Optional | The **fare_method** field contains the method of payment used to collect the fare. |
 |   |  | * **0** - Cash.  |
