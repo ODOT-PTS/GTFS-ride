@@ -143,7 +143,7 @@ An agency may use the ridership.txt file to record aggregate level ridership cou
 | route_id | Optional | The **route_id** field contains an ID that uniquely identifies a route. This value is referenced from the [routes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#routestxt) file. |
 | trip_id | Optional | The **trip_id** field contains an ID that uniquely identifies a trip. This value is referenced from the [trips.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#tripstxt) file. |
 
-### *__ride_feed_info__*
+### *__ride_feed_info.txt__*
 
 File: **Optional**
 
