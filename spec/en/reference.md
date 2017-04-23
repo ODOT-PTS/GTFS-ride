@@ -143,7 +143,7 @@ An agency may use the ridership.txt file to record aggregate level ridership cou
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
-| count | **Required** | The **count** field contains the count desired for the selected segment of ridership count. |
+| ridership | **Required** | The **ridership** field contains the count desired for the selected segment of ridership count. |
 | period_start | **Required** | The **period_start** field contains the start in POSIX time (i.e., number of seconds since January 1st 1970 00:00:00 UTC) of time period of time represented. |
 | period_end | **Required** | The **period_end** field contains the start in POSIX time (i.e., number of seconds since January 1st 1970 00:00:00 UTC) of time period of time represented. |
 | route_id | Optional | The **route_id** field contains an ID that uniquely identifies a route. This value is referenced from the [routes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#routestxt) file. |
