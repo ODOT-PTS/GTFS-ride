@@ -29,19 +29,19 @@ This specification includes the following files along with their associated cont
 
 |  Filename | Required | Defines |
 |  ------ | ------ | ------ |
->* |  [agency.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#agencytxt) | **Required** | One or more transit agencies that provide the data in this feed. |
->* |  [stops.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stopstxt) | **Required** | Individual locations where vehicles pick up or drop off passengers. |
->* |  [routes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#routestxt) | **Required** | Transit routes. A route is a group of trips that are displayed to riders as a single service. |
->* |  [trips.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#tripstxt)  | **Required** | Trips for each route. A trip is a sequence of two or more stops that occurs at a specific time. |
->* |  [stop_times.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stop_timestxt)  | **Required** | Times that a vehicle arrives at and departs from individual stops for each trip. |
->* |  [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt)  | **Required** | Dates for service IDs using a weekly schedule. Specify when service starts and ends, as well as days of the week where service is available. |
->* |  [calendar_dates.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendar_datestxt)  | Optional | Exceptions for the service IDs defined in the [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt) file. If [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt) includes ALL dates of service, this file may be specified instead of [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt). |
->* |  [fare_attributes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#fare_attributestxt)  | Optional | Fare information for a transit organization's routes. |
->* |  [fare_rules.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#fare_rulestxt)  | Optional | Rules for applying fare information for a transit organization's routes. |
->* |  [shapes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#shapestxt)  | Optional | Rules for drawing lines on a map to represent a transit organization's routes. |
->* |  [frequencies.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#frequenciestxt)  | Optional | Headway (time between trips) for routes with variable frequency of service. |
->* |  [transfers.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#transferstxt)  | Optional | Rules for making connections at transfer points between routes. |
->* |  [feed_info.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#feed_infotxt)  | Optional | Additional information about the feed itself, including publisher, version, and expiration information. |
+|  [agency.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#agencytxt) | **Required** | One or more transit agencies that provide the data in this feed. |
+|  [stops.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stopstxt) | **Required** | Individual locations where vehicles pick up or drop off passengers. |
+|  [routes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#routestxt) | **Required** | Transit routes. A route is a group of trips that are displayed to riders as a single service. |
+|  [trips.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#tripstxt)  | **Required** | Trips for each route. A trip is a sequence of two or more stops that occurs at a specific time. |
+|  [stop_times.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stop_timestxt)  | **Required** | Times that a vehicle arrives at and departs from individual stops for each trip. |
+|  [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt)  | **Required** | Dates for service IDs using a weekly schedule. Specify when service starts and ends, as well as days of the week where service is available. |
+|  [calendar_dates.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendar_datestxt)  | Optional | Exceptions for the service IDs defined in the [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt) file. If [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt) includes ALL dates of service, this file may be specified instead of [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt). |
+|  [fare_attributes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#fare_attributestxt)  | Optional | Fare information for a transit organization's routes. |
+|  [fare_rules.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#fare_rulestxt)  | Optional | Rules for applying fare information for a transit organization's routes. |
+|  [shapes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#shapestxt)  | Optional | Rules for drawing lines on a map to represent a transit organization's routes. |
+|  [frequencies.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#frequenciestxt)  | Optional | Headway (time between trips) for routes with variable frequency of service. |
+|  [transfers.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#transferstxt)  | Optional | Rules for making connections at transfer points between routes. |
+|  [feed_info.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#feed_infotxt)  | Optional | Additional information about the feed itself, including publisher, version, and expiration information. |
 |  [*__board_alight.txt__*](#board_alighttxt) | Optional | Tracks boardings/alightings along with associated information at stop-level. |
 |  [*__rider_trip.txt__*](#rider_triptxt) | Optional | Includes anonymized data about specific riders' trip. |
 |  [*__ridership.txt__*](#ridershiptxt) | Optional | Route or Trip level counts of ridership. |
