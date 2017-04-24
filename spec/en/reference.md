@@ -125,9 +125,11 @@ If an agency can associate supplementary ridership data with a specific rider, r
 | fare_paid | Optional | The **fare_paid** field contains the amount of the fare paid by the unique rider. |
 | fare_method | Optional | The **fare_method** field contains the method of payment used to collect the fare. |
 |   |  | * **0** - Cash.  |
-|   |  | * **1** - Paper transfer.  |
-|   |  | * **2** - Paper pass.  |
-|   |  | * **3** - AFC.  |
+|   |  | * **1** - Transfer.  |
+|   |  | * **2** - Pass.  |
+|   |  | * **3** - Magenetic strip card.  |
+|   |  | * **4** - RFID/Smapt card.  |
+|   |  | * **5** - Proof-of-Payment.  |
 | accompanying_device | Optional | The **accompanying_device** field contains information on any accompanying mobility or medical devices of the unique rider. |
 |   |  | * **0** - No accompanying mobility devices.  |
 |   |  | * **1** - Accompanying bike.  |
