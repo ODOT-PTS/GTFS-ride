@@ -145,10 +145,10 @@ An agency may use the ridership.txt file to record aggregate level ridership cou
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
 | ridership | **Required** | The **ridership** field contains the count desired for the selected segment of ridership count. |
-| count_start_date | **Required** | The **count_start_date** field contains the date of the start of the rideship count. The date format is YYYYMMDD. |
-| count_end_date | **Required** | The **count_end_date** field contains the date of the start of the rideship count. **count_end_date** may be the same date or later than **count_start_date**. |
-| count_start_time | Optional | The **count_start_time** field contains the time of the start of the rideship count on the date specified in **count_start_date**. The time format is HH:MM:SS. |
-| count_end_time | Optional | The **count_end_time** field contains the time of the end of the rideship count on the date specified in **count_end_date**. If **count_start_date** and **count_end_date** are the same, **count_end_time** must be later than **count_start_time**. |
+| ridership_start_date | **Required** | The **ridership_start_date** field contains the date of the start of the rideship count. The date format is YYYYMMDD. |
+| ridership_end_date | **Required** | The **ridership_end_date** field contains the date of the start of the rideship count. **ridership_end_date** may be the same date or later than **ridership_start_date**. |
+| ridership_start_time | Optional | The **ridership_start_time** field contains the time of the start of the rideship count on the date specified in **ridership_start_date**. The time format is HH:MM:SS. |
+| ridership_end_time | Optional | The **ridership_end_time** field contains the time of the end of the rideship count on the date specified in **ridership_end_date**. If **ridership_start_date** and **ridership_end_date** are the same, **ridership_end_time** must be later than **ridership_start_time**. |
 | route_id | Optional | The **route_id** field contains an ID that uniquely identifies a route. This value is referenced from the [routes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#routestxt) file. |
 | trip_id | Optional | The **trip_id** field contains an ID that uniquely identifies a trip. This value is referenced from the [trips.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#tripstxt) file. |
 
