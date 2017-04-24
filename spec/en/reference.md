@@ -84,8 +84,8 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | alightings | Optional | The **alightings** field contains the number of alightings as collected by either automated or manual methods. Less common than boarding data, this field is optional. |
 | bike_boardings | Optional | The **bike_boardings** field contains the number of bike boardings at the identified stop and trip. |
 | bike_alightings | Optional | The **bike_alightings** field contains the number of bike alightings at the identified stop and trip. |
-| wheelchair_boardings | Optional | The **wheelchair_boardings** field contains the number of wheelchair boardings at the identified stop and trip. |
-| wheelchair_alightings | Optional | The **wheelchair_alightings** field contains the number of wheelchair alightings at the identified stop and trip. |
+| ramp_boardings | Optional | The **ramp_boardings** field contains the number of ramp deployed boardings at the identified stop and trip. |
+| ramp_alightings | Optional | The **ramp_alightings** field contains the number of ramp deployed alightings at the identified stop and trip. |
 | board_date | Optional | The **board_date** field contains the date of the associated boarding data. The format is YYYYMMDD. |
 | board_time | Optional | The **board_time** field contains the time of the associated boarding data. The format is HH:MM:SS. |
 | current_load | Optional | The **current_load** field contains a calculated vehicle load at the time indicated in the **board_time** field. |
