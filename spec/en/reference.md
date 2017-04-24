@@ -145,9 +145,9 @@ An agency may use the ridership.txt file to record aggregate level ridership cou
 |  ------ | ------ | ------ |
 | ridership | **Required** | The **ridership** field contains the count desired for the selected segment of ridership count. |
 | count_start_date | **Required** | The **count_start_date** field contains the date of the start of the rideship count. The date format is YYYYMMDD. |
-| count_end_date | **Required** | The **count_end_date** field contains the date of the start of the rideship count. The date format is YYYYMMDD. **count_end_date** may be the same date or later than **count_start_date**. |
+| count_end_date | **Required** | The **count_end_date** field contains the date of the start of the rideship count. **count_end_date** may be the same date or later than **count_start_date**. |
 | count_start_time | Optional | The **count_start_time** field contains the time of the start of the rideship count on the date specified in **count_start_date**. The time format is HH:MM:SS. |
-| count_end_time | Optional | The **count_end_time** field contains the time of the end of the rideship count on the date specified in **count_end_date**. The time format is HH:MM:SS. If **count_start_date** and **count_end_date** are the same, **count_end_time** must be later than **count_start_time**. |
+| count_end_time | Optional | The **count_end_time** field contains the time of the end of the rideship count on the date specified in **count_end_date**. If **count_start_date** and **count_end_date** are the same, **count_end_time** must be later than **count_start_time**. |
 | route_id | Optional | The **route_id** field contains an ID that uniquely identifies a route. This value is referenced from the [routes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#routestxt) file. |
 | trip_id | Optional | The **trip_id** field contains an ID that uniquely identifies a trip. This value is referenced from the [trips.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#tripstxt) file. |
 
@@ -159,6 +159,6 @@ This file is similar to the GTFS feed_info.txt, but with a specific focus on met
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
-| ride_start_date | Optional | The **ride_start_date** field indicates the earliest date for the ridership data contained in the fileset. The date may match or be later than the **feed_start_date** of _feed_info.txt_. |
+| ride_start_date | Optional | The **ride_start_date** field indicates the earliest date for the ridership data contained in the fileset. The date may match or be later than the **feed_start_date** of _feed_info.txt_. The date format is YYYYMMDD. |
 | ride_end_date | Optional | The **ride_end_date** field indicates the latest data for the ridership data contained in the fileset. It must be later than the **ride_start_date** and either match or be earlier than the **feed_end_date** of _feed_info.txt_. |
 | gtfs_feed_date | Optional | The **gtfs_feed_date** indicates the date the GTFS files contained in the GTFS-ride fileset were fetched as the current GTFS feed. If **feed_version** is not included in _feed_info.txt_, this allows association of GTFS files to when they were supplied as current.
