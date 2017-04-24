@@ -88,7 +88,7 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | ramp_alightings | Optional | The **ramp_alightings** field contains the number of ramp deployed alightings at the identified stop and trip. |
 |board/alight_date | Optional | The **board/alight_date** field contains the date of the associated boarding and/or alighting data. The format is YYYYMMDD. |
 | board/alight_time | Optional | The **board/alight_time** field contains the time of the associated boarding and/or alighting data. The format is HH:MM:SS. |
-| current_load | Optional | The **current_load** field contains a calculated vehicle load at the time indicated in the **board_time** field. |
+| current_load | Optional | The **current_load** field contains the calculated current load of a vehicle departing from the the identified stop (i.e., after all boardings and alightings). |
 | source | Optional | The **source** field contains the collection method of the associated data. |
 |   |  | * **0** - Manual.  |
 |   |  | * **1** - APC.  |
