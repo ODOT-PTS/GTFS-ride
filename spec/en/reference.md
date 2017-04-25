@@ -86,9 +86,9 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | bike_alightings | Optional | The **bike_alightings** field contains the number of bike alightings at the identified stop and trip. |
 | ramp_boardings | Optional | The **ramp_boardings** field contains the number of ramp deployed boardings at the identified stop and trip. |
 | ramp_alightings | Optional | The **ramp_alightings** field contains the number of ramp deployed alightings at the identified stop and trip. |
-|board_date | Optional | The **board_date** field contains the date of the associated boarding and/or alighting data at the identifited stop. The format is YYYYMMDD. |
-| board_time | Optional | The **board_time** field contains the time of the associated boarding and/or alighting data at the identifited stop. The format is HH:MM:SS. |
-| current_load | Optional | The **current_load** field contains the calculated current load of a vehicle departing from the the identified stop (i.e., after all boardings and alightings). |
+|board_date | Optional | The **board_date** field contains the date of the associated boarding and/or alighting data at the identified stop. The format is YYYYMMDD. |
+| board_time | Optional | The **board_time** field contains the time of the associated boarding and/or alighting data at the identified stop. The format is HH:MM:SS. |
+| current_load | Optional | The **current_load** field contains the calculated current load of a vehicle departing from the identified stop (i.e., after all boardings and alightings). |
 | source | Optional | The **source** field contains the collection method of the associated data. |
 |   |  | * **0** - Manual.  |
 |   |  | * **1** - APC.  |
@@ -127,8 +127,8 @@ If an agency can associate supplementary ridership data with a specific rider, r
 |   |  | * **0** - Cash.  |
 |   |  | * **1** - Transfer.  |
 |   |  | * **2** - Pass.  |
-|   |  | * **3** - Magenetic strip card.  |
-|   |  | * **4** - RFID/Smapt card.  |
+|   |  | * **3** - Magnetic strip card.  |
+|   |  | * **4** - RFID/Smart card.  |
 |   |  | * **5** - Proof-of-Payment.  |
 | accompanying_device | Optional | The **accompanying_device** field contains information on any accompanying mobility or medical devices of the unique rider. |
 |   |  | * **0** - No accompanying mobility devices.  |
