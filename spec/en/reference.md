@@ -148,7 +148,7 @@ An agency may use the ridership.txt file to record aggregate level ridership cou
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
-| ridership | **Required** | The **ridership** field contains the count desired for the selected segment of ridership count. |
+| ridership_count | **Required** | The **ridership_count** field contains the count desired for the selected segment of ridership count. |
 | ridership_start_date | **Required** | The **ridership_start_date** field contains the date of the start of the rideship count. The date format is YYYYMMDD. |
 | ridership_end_date | **Required** | The **ridership_end_date** field contains the date of the start of the rideship count. **ridership_end_date** may be the same date or later than **ridership_start_date**. |
 | ridership_start_time | Optional | The **ridership_start_time** field contains the time of the start of the rideship count on the date specified in **ridership_start_date**. The time format is HH:MM:SS. |
