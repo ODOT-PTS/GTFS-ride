@@ -84,11 +84,11 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | alightings | Optional | The **alightings** field contains the number of alightings as collected by either automated or manual methods. Less common than boarding data, this field is optional. |
 | bike_boardings | Optional | The **bike_boardings** field contains the number of bike boardings at the identified stop and trip. |
 | bike_alightings | Optional | The **bike_alightings** field contains the number of bike alightings at the identified stop and trip. |
-| wheelchair_boardings | Optional | The **wheelchair_boardings** field contains the number of wheelchair boardings at the identified stop and trip. |
-| wheelchair_alightings | Optional | The **wheelchair_alightings** field contains the number of wheelchair alightings at the identified stop and trip. |
-| board_date | Optional | The **board_date** field contains the date of the associated boarding data. The format is YYYYMMDD. |
-| board_time | Optional | The **board_time** field contains the time of the associated boarding data. The format is HH:MM:SS. |
-| current_load | Optional | The **current_load** field contains a calculated vehicle load at the time indicated in the **board_time** field. |
+| ramp_boardings | Optional | The **ramp_boardings** field contains the number of ramp deployed boardings at the identified stop and trip. |
+| ramp_alightings | Optional | The **ramp_alightings** field contains the number of ramp deployed alightings at the identified stop and trip. |
+|board_date | Optional | The **board_date** field contains the date of the associated boarding and/or alighting data at the identifited stop. The format is YYYYMMDD. |
+| board_time | Optional | The **board_time** field contains the time of the associated boarding and/or alighting data at the identifited stop. The format is HH:MM:SS. |
+| current_load | Optional | The **current_load** field contains the calculated current load of a vehicle departing from the the identified stop (i.e., after all boardings and alightings). |
 | source | Optional | The **source** field contains the collection method of the associated data. |
 |   |  | * **0** - Manual.  |
 |   |  | * **1** - APC.  |
@@ -108,7 +108,9 @@ If an agency can associate supplementary ridership data with a specific rider, r
 | boarding_stop_id | Optional | The **boarding_stop_id** field contains the ID of the boarding stop associated with the unique rider. |
 | alighting_stop_id | Optional | The **alighting_stop_id** field contains the ID of the alighting stop associated with the unique rider. |
 | boarding_time | Optional | The **boarding_time** field contains the time of the boarding associated with the unique rider. |
+| boarding_date | Optional | The **boarding_date** field contains the date of the boarding associated with the unique rider. |
 | alighting_time | Optional | The **alighting_time** field contains the time of the alighting associated with the unique rider. |
+| alighting_date | Optional | The **alighting_date** field contains the date of the alighting associated with the unique rider. |
 | rider_type | Optional | The **rider_type** field contains information on the rider type of the unique rider. |
 |   |  | * **0** - No special rider type.  |
 |   |  | * **1** - Senior.  |
@@ -119,13 +121,15 @@ If an agency can associate supplementary ridership data with a specific rider, r
 |   |  | * **6** - Promotional category.  |
 |   |  | * **7** - Military.  |
 |   |  | * **8-11** - Custom categories.  |
-| rider_type_description | Optional | The **rider_type_description** field contains specific descriptions of the employed rider types. |
+| rider_type_description | Optional | The **rider_type_description** field contains specific descriptions of the employed rider types (e.g., _Senior - 65 and older_, _Child - 12 and under_, etc.) |
 | fare_paid | Optional | The **fare_paid** field contains the amount of the fare paid by the unique rider. |
 | fare_method | Optional | The **fare_method** field contains the method of payment used to collect the fare. |
 |   |  | * **0** - Cash.  |
-|   |  | * **1** - Paper transfer.  |
-|   |  | * **2** - Paper pass.  |
-|   |  | * **3** - AFC.  |
+|   |  | * **1** - Transfer.  |
+|   |  | * **2** - Pass.  |
+|   |  | * **3** - Magenetic strip card.  |
+|   |  | * **4** - RFID/Smapt card.  |
+|   |  | * **5** - Proof-of-Payment.  |
 | accompanying_device | Optional | The **accompanying_device** field contains information on any accompanying mobility or medical devices of the unique rider. |
 |   |  | * **0** - No accompanying mobility devices.  |
 |   |  | * **1** - Accompanying bike.  |
