@@ -12,4 +12,4 @@ The GTFS-ride defines a common formation for public transportation ridership dat
 
 ## Overview of Open Ridership Data
 
-A GTFS-ride dataset consists of a series of text files collected in a ZIP file. Each file contains a particular aspect of ridership data. The details of each filer are defined in the GTFS-ride reference. An example dataset can be found in GTFS-ride examples. A transit agency can produce a GTFS-ride dataset to share their ridership data with developers, coordinating agencies, funders, and government organizations.
+A GTFS-ride dataset consists of a series of text files collected in a ZIP file. Each file contains a particular aspect of ridership data. The details of each file are defined in the GTFS-ride reference. An example dataset can be found in GTFS-ride examples. A transit agency can produce a GTFS-ride dataset to share their ridership data with developers, coordinating agencies, funders, and government organizations.
