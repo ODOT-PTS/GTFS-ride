@@ -11,7 +11,7 @@ This document explains the types of files that comprise a GTFS-ride dataset and 
 3.  [File Requirements](#file-requirements)
 4.  [Field Definitions](#field-definitions)
     -   [*__board\_alight.txt__*](#board_alighttxt)
-    -   [*__rider\_trip.txt__*](#rider_infotxt)
+    -   [*__rider\_trip.txt__*](#rider_triptxt)
     -   [*__ridership.txt__*](#ridershiptxt)
     -   [*__ride\_feed\_info.txt__*](#ride_feed_infotxt)
 
