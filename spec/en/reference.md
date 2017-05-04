@@ -94,6 +94,7 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 |   |  | * **1** - APC.  |
 |   |  | * **2** - AFC.  |
 |   |  | * **3** - Model estimation.  |
+|   |  | * **4** - Mixed source.  |
 
 ### *__rider_trip.txt__*
 
