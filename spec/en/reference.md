@@ -45,7 +45,7 @@ This specification includes the following files along with their associated cont
 |  [*__board_alight.txt__*](#board_alighttxt) | Optional | Tracks boardings/alightings along with associated information at stop-level. |
 |  [*__rider_trip.txt__*](#rider_triptxt) | Optional | Includes anonymized data about specific riders' trip. |
 |  [*__ridership.txt__*](#ridershiptxt) | Optional | Route or Trip level counts of ridership. |
-|  [*__ride_feed_info.txt__*](#ride_feed_infotxt) | Optional | Information specific to the source and attributes of the addional ridership files. |
+|  [*__ride_feed_info.txt__*](#ride_feed_infotxt) | **Required** | Information specific to the source and attributes of the addional ridership files. |
 
 ## File Requirements
 _Retrieved from GTFS [https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md)_
@@ -158,12 +158,20 @@ An agency may use the ridership.txt file to record aggregate level ridership cou
 
 ### *__ride_feed_info.txt__*
 
-File: **Optional**
+File: **Required**
 
 This file is similar to the GTFS feed_info.txt, but with a specific focus on metadata for the additional ridership files.
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
+| ride_files | **Required** | The **ride_files** field indicates the files containing valid ridership data. |
+|   |  | * **0** - board_alight  |
+|   |  | * **1** - rider_trip  |
+|   |  | * **2** - ridership  |
+|   |  | * **3** - board_alight and rider_trip  |
+|   |  | * **4** - board_alight and ridership |
+|   |  | * **5** - rider_trip and ridership |
+|   |  | * **6** - board_alight, rider_trip, and ridership |
 | ride_start_date | Optional | The **ride_start_date** field indicates the earliest date for the ridership data contained in the fileset. The date may match or be later than the **feed_start_date** of _feed_info.txt_. The date format is YYYYMMDD. |
 | ride_end_date | Optional | The **ride_end_date** field indicates the latest data for the ridership data contained in the fileset. It must be later than the **ride_start_date** and either match or be earlier than the **feed_end_date** of _feed_info.txt_. |
 | gtfs_feed_date | Optional | The **gtfs_feed_date** indicates the date the GTFS files contained in the GTFS-ride fileset were fetched as the current GTFS feed. If **feed_version** is not included in _feed_info.txt_, **gtfs_feed_date** allows association of GTFS files to when they were supplied as current.
