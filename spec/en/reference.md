@@ -25,7 +25,7 @@ _Retrieved from GTFS [https://github.com/google/transit/blob/master/gtfs/spec/en
 
 ## Feed Files
 
-This specification includes the following files along with their associated content. **Bolded** files are unique to GTFS-ride, while the rest reference GTFS files. More information on the GTFS files may be found at [https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md).
+This specification includes the following files along with their associated content. **Bolded** files are unique to GTFS-ride, while the rest reference GTFS files. GTFS-ride follows, and by delfault adopts, changes in GTFS files already specified in GTFS-ride. If a new file is added to GTFS, its inclusion in GTFS-ride will follow the change process specified for any change to GTFS-ride. More information on the GTFS files may be found at [https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md).
 
 |  Filename | Required | Defines |
 |  ------ | ------ | ------ |
@@ -84,8 +84,8 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | alightings | Optional | The **alightings** field contains the number of alightings as collected by either automated or manual methods. Less common than boarding data, this field is optional. |
 | bike_boardings | Optional | The **bike_boardings** field contains the number of bike boardings at the identified stop and trip. |
 | bike_alightings | Optional | The **bike_alightings** field contains the number of bike alightings at the identified stop and trip. |
-| ramp_boardings | Optional | The **ramp_boardings** field contains the number of ramp deployed boardings at the identified stop and trip. |
-| ramp_alightings | Optional | The **ramp_alightings** field contains the number of ramp deployed alightings at the identified stop and trip. |
+| ramp_boardings | Optional | The **ramp_boardings** field contains the number of ramp or lift deployed boardings at the identified stop and trip. |
+| ramp_alightings | Optional | The **ramp_alightings** field contains the number of ramp or lift deployed alightings at the identified stop and trip. |
 |board_date | Optional | The **board_date** field contains the date of the associated boarding and/or alighting data at the identified stop. The format is YYYYMMDD. |
 | board_time | Optional | The **board_time** field contains the time of the associated boarding and/or alighting data at the identified stop. The format is HH:MM:SS. |
 | current_load | Optional | The **current_load** field contains the calculated current load of a vehicle departing from the identified stop (i.e., after all boardings and alightings). |
@@ -94,6 +94,7 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 |   |  | * **1** - APC.  |
 |   |  | * **2** - AFC.  |
 |   |  | * **3** - Model estimation.  |
+|   |  | * **4** - Mixed source.  |
 
 ### *__rider_trip.txt__*
 
@@ -155,6 +156,8 @@ An agency may use the ridership.txt file to record aggregate level ridership cou
 | ridership_end_time | Optional | The **ridership_end_time** field contains the time of the end of the rideship count on the date specified in **ridership_end_date**. If **ridership_start_date** and **ridership_end_date** are the same, **ridership_end_time** must be later than **ridership_start_time**. |
 | route_id | Optional | The **route_id** field contains an ID that uniquely identifies a route. This value is referenced from the [routes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#routestxt) file. |
 | trip_id | Optional | The **trip_id** field contains an ID that uniquely identifies a trip. This value is referenced from the [trips.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#tripstxt) file. |
+| direction_id | Optional | The **direction_id** field contains an ID that identifies the direction of travel for a trip. This value is referenced from the [trips.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#tripstxt) file. |
+| stop_id | Optional | The **stop_id** field contains an ID that uniquely identifies a stop. This value is referenced from the [stops.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stopstxt) file. |
 
 ### *__ride_feed_info.txt__*
 
