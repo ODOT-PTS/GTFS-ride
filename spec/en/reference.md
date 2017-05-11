@@ -82,8 +82,8 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | trip_id | **Required** | The **trip_id** contains an ID that uniquely identifies a trip. |
 | boardings | **Required** | The **boardings** field contains the number of boardings as collected by either automated or manual methods. |
 | alightings | Optional | The **alightings** field contains the number of alightings as collected by either automated or manual methods. Less common than boarding data, this field is optional. |
-| bike_boardings | Optional | The **bike_boardings** field contains the number of bike boardings at the identified stop and trip. |
-| bike_alightings | Optional | The **bike_alightings** field contains the number of bike alightings at the identified stop and trip. |
+| bike_boardings | Optional | The **bike_boardings** field contains the number of bike boardings at the identified stop and trip. This value represents both bikes racked externally and bikes brought inside the passenger compartment. |
+| bike_alightings | Optional | The **bike_alightings** field contains the number of bike alightings at the identified stop and trip. This value represents both bikes racked externally and bikes brought inside the passenger compartment. |
 | ramp_boardings | Optional | The **ramp_boardings** field contains the number of ramp or lift deployed boardings at the identified stop and trip. |
 | ramp_alightings | Optional | The **ramp_alightings** field contains the number of ramp or lift deployed alightings at the identified stop and trip. |
 |board_date | Optional | The **board_date** field contains the date of the associated boarding and/or alighting data at the identified stop. The format is YYYYMMDD. |
