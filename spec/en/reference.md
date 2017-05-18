@@ -86,9 +86,12 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | bike_alightings | Optional | The **bike_alightings** field contains the number of bike alightings at the identified stop and trip. This value represents both bikes racked externally and bikes brought inside the passenger compartment. |
 | ramp_boardings | Optional | The **ramp_boardings** field contains the number of ramp or lift deployed boardings at the identified stop and trip. |
 | ramp_alightings | Optional | The **ramp_alightings** field contains the number of ramp or lift deployed alightings at the identified stop and trip. |
-|board_date | Optional | The **board_date** field contains the date of the associated boarding and/or alighting data at the identified stop. The format is YYYYMMDD. |
+| board_date | Optional | The **board_date** field contains the date of the associated boarding and/or alighting data at the identified stop. The format is YYYYMMDD. |
 | board_time | Optional | The **board_time** field contains the time of the associated boarding and/or alighting data at the identified stop. The format is HH:MM:SS. |
-| current_load | Optional | The **current_load** field contains the calculated current load of a vehicle departing from the identified stop (i.e., after all boardings and alightings). |
+| load_type | Optional | The **load_type** field specifies the state (arriving or departing) at which **current_load** is measured. If no value is given, **current_load** indicates arriving load |
+|   |  | * **0** - Arriving.  |
+|   |  | * **1** - Departing.  |
+| current_load | Optional | The **current_load** field contains the calculated percentage current load of a vehicle at the identified stop. The state at which **current_load** is measured, is specified by **load_type**; if no value is given in **load_type**, **current_load** is arriving load. |
 | source | Optional | The **source** field contains the collection method of the associated data. |
 |   |  | * **0** - Manual.  |
 |   |  | * **1** - APC.  |
