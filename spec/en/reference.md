@@ -81,7 +81,7 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | trip_id | **Required** | The **trip_id** contains an ID that uniquely identifies a trip. |
 | stop_id | **Required** | The **stop_id** contains an ID that uniquely identifies a stop. |
 | stop_sequence| **Required** | The **stop_sequence** identifies the order of the stops for a particular trip. Matches stop_sequence in _stop_times.txt_. Non-negative integer. |
-| boardings | **Required** | The **boardings** field contains the number of boardings as collected by either automated or manual methods. |
+| boardings | Optional | The **boardings** field contains the number of boardings as collected by either automated or manual methods. |
 | alightings | Optional | The **alightings** field contains the number of alightings as collected by either automated or manual methods. Less common than boarding data, this field is optional. |
 | bike_boardings | Optional | The **bike_boardings** field contains the number of bike boardings at the identified stop and trip. This value represents both bikes racked externally and bikes brought inside the passenger compartment. |
 | bike_alightings | Optional | The **bike_alightings** field contains the number of bike alightings at the identified stop and trip. This value represents both bikes racked externally and bikes brought inside the passenger compartment. |
