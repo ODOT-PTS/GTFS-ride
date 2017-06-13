@@ -94,6 +94,16 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | service_date | Optional | The **service_date** field contains the date of the associated boarding and/or alighting data at the identified stop. The format is YYYYMMDD. |
 | service_arrival_time | Optional | The **service_arrival_time** field contains the time of the actual arrival at the identified stop. The format is HH:MM:SS. |
 | service_departure_time | Optional | The **service_departure_time** field contains the time of the actual departure from the identified stop. The format is HH:MM:SS. |
+| schedule_relationship | Optional | The **schedule_relationship** field identifies whether service was scheduled and operated, or scheduled but not operated, or operated but not scheduled. If a trip is added it must have a **trip_id** that is not scheduled to run on that day and is unique among trips added on that day.  |
+|   |  | * **0** - (or empty) Service was scheduled and operated  |
+|   |  | * **1** - whole scheduled trip was cancelled.  |
+|   |  | * **2** - whole scheduled trip was cancelled (but replaced with an added trip.)  |
+|   |  | * **3** - trip ran but this **stop_time** was cancelled.   |
+|   |  | * **4** - trip ran but this **stop_time** was cancelled (but replaced with a different stop.)  |
+|   |  | * **5** - whole trip was added. |
+|   |  | * **6** - whole trip was added (as a replacement.)  |
+|   |  | * **7** - this **stop_time** was added to a scheduled trip.    |
+|   |  | * **8** - this **stop_time** was added to a scheduled trip (replacing something cancelled).    |
 | source | Optional | The **source** field contains the collection method of the associated data. |
 |   |  | * **0** - Manual.  |
 |   |  | * **1** - APC.  |
