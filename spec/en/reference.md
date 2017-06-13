@@ -135,9 +135,8 @@ If an agency can associate supplementary ridership data with a specific rider, r
 |   |  | * **3** - Student.  |
 |   |  | * **4** - Youth.  |
 |   |  | * **5** - Disabled.  |
-|   |  | * **6** - Promotional category.  |
-|   |  | * **7** - Military.  |
-|   |  | * **8-11** - Custom categories.  |
+|   |  | * **6** - Military. |
+|   |  | * **7-13** - Custom categories.  |
 | rider_type_description | Optional | The **rider_type_description** field contains specific descriptions of the employed rider types (e.g., _Senior - 65 and older_, _Child - 12 and under_, etc.) |
 | fare_paid | Optional | The **fare_paid** field contains the amount of the fare paid by the unique rider. |
 | fare_method | Optional | The **fare_method** field contains the method of payment used to collect the fare. |
