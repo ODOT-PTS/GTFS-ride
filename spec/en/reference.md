@@ -139,13 +139,27 @@ If an agency can associate supplementary ridership data with a specific rider, r
 |   |  | * **7-13** - Custom categories.  |
 | rider_type_description | Optional | The **rider_type_description** field contains specific descriptions of the employed rider types (e.g., _Senior - 65 and older_, _Child - 12 and under_, etc.) |
 | fare_paid | Optional | The **fare_paid** field contains the amount of the fare paid by the unique rider. |
-| fare_method | Optional | The **fare_method** field contains the method of payment used to collect the fare. |
-|   |  | * **0** - Cash.  |
-|   |  | * **1** - Transfer.  |
-|   |  | * **2** - Pass.  |
-|   |  | * **3** - Magnetic strip card.  |
-|   |  | * **4** - RFID/Smart card.  |
-|   |  | * **5** - Proof-of-Payment.  |
+| transaction_type | Optional | The **transaction_type** field indicates what entitled the customer to the trip.  |
+|   |  | * **0** - customer paid cash/credit/debit.  |
+|   |  | * **1** - customer used stored value or tokens.  |
+|   |  | * **2** - customer used a transfer.  |
+|   |  | * **3** - customer used a pass.  |
+|   |  | * **4** - customer used a promotional coupon.  |
+|   |  | * **5** - trip is a free trip.  |
+|   |  | * **6** - customer was never charged the fare.  |
+|   |  | * **7** - customer was charged a fare but did not pay.  |
+|   |  | * **8** - Other.  |
+| fare_media | Optional | The **fare_media** field indicates what media was used to pay the fare. |
+|   |  | * **0** - (or blank) Not applicable or unknown.  |
+|   |  | * **1** - Cash.  |
+|   |  | * **2** - Paper transfer, single-use paper ticket, or token.  |
+|   |  | * **3** - Paper flash pass (visual inspection).  |
+|   |  | * **4** - Software flash pass (visual inspection).  |
+|   |  | * **5** - Proof-of-payment receipt  |
+|   |  | * **6** - Magnetic strip card, agency-issued.  |
+|   |  | * **7** - RFID or smart card, agency-issued  |
+|   |  | * **8** - Magnetic strip card, open payment.  |
+|   |  | * **9** - RFID or smart card, open payment  |
 | accompanying_device | Optional | The **accompanying_device** field contains information on any accompanying mobility or medical devices of the unique rider. |
 |   |  | * **0** - No accompanying mobility devices.  |
 |   |  | * **1** - Accompanying bike.  |
