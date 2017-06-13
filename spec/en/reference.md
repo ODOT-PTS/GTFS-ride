@@ -128,7 +128,6 @@ If an agency can associate supplementary ridership data with a specific rider, r
 | service_date | Optional | The **service_date** field contains the date of the boarding associated with the unique rider. |
 | boarding_time | Optional | The **boarding_time** field contains the time of the boarding associated with the unique rider. |
 | alighting_time | Optional | The **alighting_time** field contains the time of the alighting associated with the unique rider. |
-| alighting_date | Optional | The **alighting_date** field contains the date of the alighting associated with the unique rider. |
 | rider_type | Optional | The **rider_type** field contains information on the rider type of the unique rider. |
 |   |  | * **0** - No special rider type.  |
 |   |  | * **1** - Senior.  |
