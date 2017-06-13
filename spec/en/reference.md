@@ -122,7 +122,9 @@ If an agency can associate supplementary ridership data with a specific rider, r
 | rider_id | **Required** | The **rider_id** field contains the ID of a unique rider. The **rider_id** is dataset unique. |
 | trip_id | Optional | The **trip_id** field contains the ID of the trip associated with the unique rider, if this is known. If **trip_id** is empty then the rider may have taken one of several trips, or several possible chains of trips, to travel between the origin and the destination.   |
 | boarding_stop_id | Optional | The **boarding_stop_id** field contains the ID of the boarding stop associated with the unique rider. |
+| boarding_stop_sequence | Optional | The **boarding_stop_sequence** field identifies the order of the stop referenced **boarding_stop_id** within a particular trip. Matches **stop_sequence** in _stop_times.txt_. Non-negative integer. |
 | alighting_stop_id | Optional | The **alighting_stop_id** field contains the ID of the alighting stop associated with the unique rider. |
+| alighting_stop_sequence | Optional | The **alighting_stop_sequence** field identifies the order of the stop referenced **alighting_stop_id** within a particular trip. Matches **stop_sequence** in _stop_times.txt_. Non-negative integer. |
 | service_date | Optional | The **service_date** field contains the date of the boarding associated with the unique rider. |
 | boarding_time | Optional | The **boarding_time** field contains the time of the boarding associated with the unique rider. |
 | alighting_time | Optional | The **alighting_time** field contains the time of the alighting associated with the unique rider. |
