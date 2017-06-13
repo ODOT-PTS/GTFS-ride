@@ -83,16 +83,16 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | stop_sequence| **Required** | The **stop_sequence** identifies the order of the stops for a particular trip. Matches stop_sequence in _stop_times.txt_. Non-negative integer. |
 | boardings | Optional | The **boardings** field contains the number of boardings as collected by either automated or manual methods. Non-negative integer. |
 | alightings | Optional | The **alightings** field contains the number of alightings as collected by either automated or manual methods. Less common than boarding data, this field is optional. Non-negative integer. |
+| current_load | Optional | The **current_load** field contains the calculated percentage current load of a vehicle at the identified stop. The state at which **current_load** is measured, is specified by **load_type**; if no value is given in **load_type**, **current_load** is arriving load.  Non-negative integer.|
+| load_type | Optional | The **load_type** field specifies the state (arriving or departing) at which **current_load** is measured. If no value is given, **current_load** indicates arriving load |
+|   |  | * **0** - Arriving.  |
+|   |  | * **1** - Departing.  |
 | bike_boardings | Optional | The **bike_boardings** field contains the number of bike boardings at the identified stop and trip. This value represents both bikes racked externally and bikes brought inside the passenger compartment. Non-negative integer. |
 | bike_alightings | Optional | The **bike_alightings** field contains the number of bike alightings at the identified stop and trip. This value represents both bikes racked externally and bikes brought inside the passenger compartment. Non-negative integer. |
 | ramp_boardings | Optional | The **ramp_boardings** field contains the number of ramp or lift deployed boardings at the identified stop and trip. Non-negative integer. |
 | ramp_alightings | Optional | The **ramp_alightings** field contains the number of ramp or lift deployed alightings at the identified stop and trip. Non-negative integer. |
 | board_date | Optional | The **board_date** field contains the date of the associated boarding and/or alighting data at the identified stop. The format is YYYYMMDD. |
 | board_time | Optional | The **board_time** field contains the time of the associated boarding and/or alighting data at the identified stop. The format is HH:MM:SS. |
-| load_type | Optional | The **load_type** field specifies the state (arriving or departing) at which **current_load** is measured. If no value is given, **current_load** indicates arriving load |
-|   |  | * **0** - Arriving.  |
-|   |  | * **1** - Departing.  |
-| current_load | Optional | The **current_load** field contains the calculated percentage current load of a vehicle at the identified stop. The state at which **current_load** is measured, is specified by **load_type**; if no value is given in **load_type**, **current_load** is arriving load. |
 | source | Optional | The **source** field contains the collection method of the associated data. |
 |   |  | * **0** - Manual.  |
 |   |  | * **1** - APC.  |
