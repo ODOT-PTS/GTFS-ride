@@ -165,7 +165,8 @@ If an agency can associate supplementary ridership data with a specific rider, r
 |   |  | * **1** - Accompanying bike.  |
 |   |  | * **2** - Accompanying wheelchair.  |
 |   |  | * **3** - Accompanying medical device.  |
-|   |  | * **4** - Other accompanying device.  |
+|   |  | * **4** - Accompanying service animal.  |
+|   |  | * **5** - Other accompanying device.  |
 | transfer_status | Optional | The **transfer_status** field contains the transfer status of the unique rider. |
 |   |  | * 0 - rider is not a transfer |
 |   |  | * 1 - rider is a transfer |
