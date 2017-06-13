@@ -126,8 +126,12 @@ If an agency can associate supplementary ridership data with a specific rider, r
 | alighting_stop_id | Optional | The **alighting_stop_id** field contains the ID of the alighting stop associated with the unique rider. |
 | alighting_stop_sequence | Optional | The **alighting_stop_sequence** field identifies the order of the stop referenced **alighting_stop_id** within a particular trip. Matches **stop_sequence** in _stop_times.txt_. Non-negative integer. |
 | service_date | Optional | The **service_date** field contains the date of the boarding associated with the unique rider. |
-| boarding_time | Optional | The **boarding_time** field contains the time of the boarding associated with the unique rider. |
-| alighting_time | Optional | The **alighting_time** field contains the time of the alighting associated with the unique rider. |
+| boarding_time | Optional | The **boarding_time** field contains the time of the boarding associated with the unique rider. If the **trip_id** is included, **boarding_time** represents the time that the rider boarded the vehicle. It must be between **service_arrival_time** and **service_departure_time**, inclusive, of the trip’s stop in _board_alight.txt_ if applicable. 
+
+If the trip_id is not included, **boarding_time** represents the time that the rider entered the transit network. |
+| alighting_time | Optional | The **alighting_time** field contains the time of the alighting associated with the unique rider. If the **trip_id** is included, **alighting_time** represents the time that the rider exited the vehicle. It must be between **service_arrival_time** and **service_departure_time**, inclusive, of the trip’s stop in _board_alight.txt_ if applicable. 
+
+If the trip_id is not included, **alighting_time** represents the time that the rider left the transit network.  |
 | rider_type | Optional | The **rider_type** field contains information on the rider type of the unique rider. |
 |   |  | * **0** - No special rider type.  |
 |   |  | * **1** - Senior.  |
