@@ -102,6 +102,9 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | load_type | Optional | The **load_type** field specifies the state (arriving or departing) at which **current_load** is measured. If no value is given, **current_load** indicates arriving load |
 |   |  | * **0** - Arriving.  |
 |   |  | * **1** - Departing.  |
+| rack_down | Optional | The **rack_down** field indicated whether an external bike rack was deployed or remained down at the associated **stop_id**. This field should be used in conjunction with **bike_boardings** and **bike_alightings** if more detailed information is available. |
+|   |  | * **0** - Bike rack retracted and/or stowed.  |
+|   |  | * **1** - Bike rack deployed and/or in use.  |
 | bike_boardings | Optional | The **bike_boardings** field contains the number of bike boardings at the identified stop and trip. This value represents both bikes racked externally and bikes brought inside the passenger compartment. Non-negative integer. |
 | bike_alightings | Optional | The **bike_alightings** field contains the number of bike alightings at the identified stop and trip. This value represents both bikes racked externally and bikes brought inside the passenger compartment. Non-negative integer. |
 | ramp_boardings | Optional | The **ramp_boardings** field contains the number of ramp or lift deployed boardings at the identified stop and trip. Non-negative integer. |
