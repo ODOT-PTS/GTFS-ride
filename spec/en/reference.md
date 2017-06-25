@@ -81,8 +81,8 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | trip_id | **Required** | The **trip_id** contains an ID that uniquely identifies a trip. |
 | stop_id | **Required** | The **stop_id** contains an ID that uniquely identifies a stop. |
 | stop_sequence| **Required** | The **stop_sequence** identifies the order of the stops for a particular trip. Matches **stop_sequence** in _stop_times.txt_. Non-negative integer. |
-| boardings | Optional | The **boardings** field contains the number of boardings as collected by either automated or manual methods. Non-negative integer. |
-| alightings | Optional | The **alightings** field contains the number of alightings as collected by either automated or manual methods. Less common than boarding data, this field is optional. Non-negative integer. |
+| boardings | Optional | The **boardings** field contains the number of boardings at (or nearest to) the associated **stop_id** as collected by either automated or manual methods. Non-negative integer. |
+| alightings | Optional | The **alightings** field contains the number of alightings at (or nearest to) the associated **stop_id** as collected by either automated or manual methods. Less common than boarding data, this field is optional. Non-negative integer. |
 | current_load | Optional | The **current_load** field contains the calculated percentage current load of a vehicle at the identified stop. The state at which **current_load** is measured, is specified by **load_type**; if no value is given in **load_type**, **current_load** is arriving load.  Non-negative integer.|
 | load_type | Optional | The **load_type** field specifies the state (arriving or departing) at which **current_load** is measured. If no value is given, **current_load** indicates arriving load |
 |   |  | * **0** - Arriving.  |
