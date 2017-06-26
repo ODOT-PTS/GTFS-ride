@@ -225,9 +225,9 @@ An agency may use the ridership.txt file to record aggregate level ridership cou
 | wednesday | Optional | The **wednesday** field contains a binary value that indicates whether or not ridership for all Wednesdays within the given date range is included in the aggregate counts. |
 |   |  | * **0** - Wednesday ridership is not included in the ridership counts. |
 |   |  | * **1** - Wednesday ridership is included in the ridership counts. |
-| thrusday | Optional | The **thrusday** field contains a binary value that indicates whether or not ridership for all Thrusdays within the given date range is included in the aggregate counts. |
-|   |  | * **0** - Thrusday ridership is not included in the ridership counts. |
-|   |  | * **1** - Thrusday ridership is included in the ridership counts. |
+| thursday | Optional | The **thursday** field contains a binary value that indicates whether or not ridership for all Thursdays within the given date range is included in the aggregate counts. |
+|   |  | * **0** - Thursday ridership is not included in the ridership counts. |
+|   |  | * **1** - Thursday ridership is included in the ridership counts. |
 | friday | Optional | The **friday** field contains a binary value that indicates whether or not ridership for all Fridays within the given date range is included in the aggregate counts. |
 |   |  | * **0** - Friday ridership is not included in the ridership counts. |
 |   |  | * **1** - Friday ridership is included in the ridership counts. |
