@@ -198,8 +198,8 @@ If an agency can associate supplementary ridership data with a specific rider, r
 |   |  | * **5** - Accompanying personal care attendant.  |
 |   |  | * **6** - Other accompanying device.  |
 | transfer_status | Optional | The **transfer_status** field contains the transfer status of the unique rider. |
-|   |  | * 0 - rider is not a transfer |
-|   |  | * 1 - rider is a transfer |
+|   |  | * **0** - rider is not a transfer |
+|   |  | * **1** - rider is a transfer |
 
 ### *__ridership.txt__*
 
@@ -215,7 +215,28 @@ An agency may use the ridership.txt file to record aggregate level ridership cou
 | ridership_end_date | **Required** | The **ridership_end_date** field contains the date of the end of the rideship count. **ridership_end_date** may be the same date or later than **ridership_start_date**. |
 | ridership_start_time | Optional | The **ridership_start_time** field contains the time of the start of the rideship count on the date specified in **ridership_start_date**. The time format is HH:MM:SS. |
 | ridership_end_time | Optional | The **ridership_end_time** field contains the time of the end of the rideship count on the date specified in **ridership_end_date**. If **ridership_start_date** and **ridership_end_date** are the same, **ridership_end_time** must be later than **ridership_start_time**. |
-| service_id | Optional | The **service_id** field contains an ID that uniquely identifies a set of dates when service is available for one or more routes. This value is referenced from the [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendar.txt) file. Use this field to aggregate ridership over days of the week sets preexisting in GTFS service IDs.  |
+| service_id | Optional | The **service_id** field contains an ID that uniquely identifies a set of dates over which to aggregate ridership. This value is referenced from the [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendar.txt) file. The **ridership_start_date** to **ridership_end_date** date range must fully contain the date range specified for the associated **service_id** through the **start_date** and **end_date** fields of _calendar.txt_.  Use this field to indicate aggregation of ridership over day-of-the-week sets preexisting in GTFS service IDs. To aggregate over custom day-of-the-week sets within the **ridership_start_date** to **ridership_end_date** date range, use the following binary date selection fields.   |
+| monday | Optional | The **monday** field contains a binary value that indicates whether or not ridership for all Mondays within the given date range is included in the aggregate counts. |
+|   |  | * **0** - Monday ridership is not included in the ridership counts. |
+|   |  | * **1** - Monday ridership is included in the ridership counts. |
+| tuesday | Optional | The **tuesday** field contains a binary value that indicates whether or not ridership for all Tuesdays within the given date range is included in the aggregate counts. |
+|   |  | * **0** - Tuesday ridership is not included in the ridership counts. |
+|   |  | * **1** - Tuesday ridership is included in the ridership counts. |
+| wednesday | Optional | The **wednesday** field contains a binary value that indicates whether or not ridership for all Wednesdays within the given date range is included in the aggregate counts. |
+|   |  | * **0** - Wednesday ridership is not included in the ridership counts. |
+|   |  | * **1** - Wednesday ridership is included in the ridership counts. |
+| thrusday | Optional | The **thrusday** field contains a binary value that indicates whether or not ridership for all Thrusdays within the given date range is included in the aggregate counts. |
+|   |  | * **0** - Thrusday ridership is not included in the ridership counts. |
+|   |  | * **1** - Thrusday ridership is included in the ridership counts. |
+| friday | Optional | The **friday** field contains a binary value that indicates whether or not ridership for all Fridays within the given date range is included in the aggregate counts. |
+|   |  | * **0** - Friday ridership is not included in the ridership counts. |
+|   |  | * **1** - Friday ridership is included in the ridership counts. |
+| saturday | Optional | The **saturday** field contains a binary value that indicates whether or not ridership for all Saturdays within the given date range is included in the aggregate counts. |
+|   |  | * **0** - Saturday ridership is not included in the ridership counts. |
+|   |  | * **1** - Saturday ridership is included in the ridership counts. |
+| sunday | Optional | The **sunday** field contains a binary value that indicates whether or not ridership for all Sundays within the given date range is included in the aggregate counts. |
+|   |  | * **0** - Sunday ridership is not included in the ridership counts. |
+|   |  | * **1** - Sunday ridership is included in the ridership counts. |
 | agency_id | Optional | The **agency_id** field contains an ID that uniquely identifies an agency. This value is referenced from the [agency.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#agencytxt) file.   |
 | route_id | Optional | The **route_id** field contains an ID that uniquely identifies a route. This value is referenced from the [routes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#routestxt) file. |
 | direction_id | Optional | The **direction_id** field contains an ID that identifies the direction of travel for a trip. This value is referenced from the [trips.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#tripstxt) file. |
