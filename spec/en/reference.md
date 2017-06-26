@@ -124,7 +124,7 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 
 ### *__trip_capacity.txt__*
 
-File: Optional
+File: **Optional**
 
 The trip_capacity.txt file identifies the capacity of a vehicle operating a trip on a given day to support crowding analysis in conjunction with board_alight.txt.
 
