@@ -11,6 +11,7 @@ This document explains the types of files that comprise a GTFS-ride dataset and 
 3.  [File Requirements](#file-requirements)
 4.  [Field Definitions](#field-definitions)
     -   [*__board\_alight.txt__*](#board_alighttxt)
+    -   [*__trip\_capacity.txt__*](#trip_capacitytxt )
     -   [*__rider\_trip.txt__*](#rider_triptxt)
     -   [*__ridership.txt__*](#ridershiptxt)
     -   [*__ride\_feed\_info.txt__*](#ride_feed_infotxt)
@@ -43,6 +44,7 @@ This specification includes the following files along with their associated cont
 |  [transfers.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#transferstxt)  | Optional | Rules for making connections at transfer points between routes. |
 |  [feed_info.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#feed_infotxt)  | Optional | Additional information about the feed itself, including publisher, version, and expiration information. |
 |  [*__board_alight.txt__*](#board_alighttxt) | Optional | Tracks boardings/alightings along with associated information at stop-level. |
+|  [*__trip_capacity.txt__*](#trip_capacitytxt) | Optional | Identifies the capacities of a vehicle operating a trip on a given day. |
 |  [*__rider_trip.txt__*](#rider_triptxt) | Optional | Includes anonymized data about specific riders' trip. |
 |  [*__ridership.txt__*](#ridershiptxt) | Optional | Route or Trip level counts of ridership. |
 |  [*__ride_feed_info.txt__*](#ride_feed_infotxt) | **Required** | Information specific to the source and attributes of the addional ridership files. |
@@ -119,6 +121,22 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 |   |  | * **2** - AFC.  |
 |   |  | * **3** - Model estimation.  |
 |   |  | * **4** - Mixed source.  |
+
+### *__trip_capacity.txt__*
+
+File: Optional
+
+The trip_capacity.txt file identifies the capacity of a vehicle operating a trip on a given day to support crowding analysis in conjunction with board_alight.txt.
+
+|  Field Name | Required | Details |
+|  ------ | ------ | ------ |
+| trip_id | Optional | The **trip_id** field contains an id that uniquely identifies a trip. If an agency has only one type of vehicle, or operated only one type of vehicle on the given service_date, it can leave trip_id blank to specify capacity of all trips with one record.    |
+| service_date | Optional | The **service_date** field contains the date of the trip. If an agency has only one type of vehicle, or only ever operates one type of vehicle on the given trip, it can leave actual_date blank to specify capacity of all dates with one record. The format is YYYYMMDD. |
+| vehicle_description | Optional | The **vehicle_description** field contains the additional information about the vehicle associated with **trip_id** and **service_date** needed for analysis or reporting. |
+| seated_capacity | Optional | The **seated_capacity** field contains the number of passenger seats.  Non-negative integer.|
+| standing_capacity | Optional | The **standing_capacity** field contains the maximum number of standees according to agency policy.  Non-negative integer.|
+| wheelchair_capacity | Optional | The **wheelchair_capacity** field contains the maximum number of wheelchairs vehicle will accommodate. Non-negative integer.|
+| bike_capacity | Optional | The **bike_capacity** field contains the maximum number of bikes vehicle will accommodate. Non-negative integer.|
 
 ### *__rider_trip.txt__*
 
