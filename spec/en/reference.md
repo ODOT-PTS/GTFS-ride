@@ -81,17 +81,15 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | trip_id | **Required** | The **trip_id** contains an ID that uniquely identifies a trip. |
 | stop_id | **Required** | The **stop_id** contains an ID that uniquely identifies a stop. |
 | stop_sequence| **Required** | The **stop_sequence** identifies the order of the stops for a particular trip. Matches **stop_sequence** in _stop_times.txt_. Non-negative integer. |
-| record_use | **Required** | The **record_use** field indicates the purpose of this record.  |
-|   |  | * **0** - Entry records a combination of boarding and alighting counts for the associated **stop_id**. |
-|   |  | * **1** - Entry records only boarding counts for the associated **stop_id** in the **boardings** field. |
-|   |  | * **2** - Entry records only alighting counts for the associated **stop_id** in the **alightings** field. |
-|   |  | * **3** - Entry contains no ridership counts, but contains service cancellation data in **schedule_relationship** |
+| record_use | **Required** | The **record_use** field indicates the purpose of this record. Data in the fields **schedule_relationship**, **boardings**, and **alightings** should correspond to the selection for **record_use**.  |
+|   |  | * **0** - Entry contains complete ridership counts for the associated **stop_id** in the field(s) **boardings** and/or **alightings** as available. |
+|   |  | * **1** - Entry contains no ridership counts, but contains service cancellation data in **schedule_relationship**. |
 | schedule_relationship | Optional | The **schedule_relationship** field identifies whether service was scheduled and operated, or scheduled but not operated, or operated but not scheduled. If a trip is added it must have a **trip_id** that is not scheduled to run on that day and is unique among trips added on that day.  |
-|   |  | * **0** - (or empty) Service was scheduled and operated  |
+|   |  | * **0** - (or empty) Service was scheduled and operated. |
 |   |  | * **1** - whole scheduled trip was cancelled.  |
-|   |  | * **2** - whole scheduled trip was cancelled (but replaced with an added trip.)  |
+|   |  | * **2** - whole scheduled trip was cancelled (but replaced with an added trip).  |
 |   |  | * **3** - trip ran but this **stop_time** was cancelled.   |
-|   |  | * **4** - trip ran but this **stop_time** was cancelled (but replaced with a different stop.)  |
+|   |  | * **4** - trip ran but this **stop_time** was cancelled (but replaced with a different stop).  |
 |   |  | * **5** - whole trip was added. |
 |   |  | * **6** - whole trip was added (as a replacement.)  |
 |   |  | * **7** - this **stop_time** was added to a scheduled trip.    |
