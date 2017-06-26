@@ -217,8 +217,8 @@ An agency may use the ridership.txt file to record aggregate level ridership cou
 | ridership_end_time | Optional | The **ridership_end_time** field contains the time of the end of the rideship count on the date specified in **ridership_end_date**. If **ridership_start_date** and **ridership_end_date** are the same, **ridership_end_time** must be later than **ridership_start_time**. |
 | agency_id | Optional | The **agency_id** field contains an ID that uniquely identifies an agency. This value is referenced from the [agency.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#agencytxt) file.   |
 | route_id | Optional | The **route_id** field contains an ID that uniquely identifies a route. This value is referenced from the [routes.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#routestxt) file. |
-| trip_id | Optional | The **trip_id** field contains an ID that uniquely identifies a trip. This value is referenced from the [trips.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#tripstxt) file. |
 | direction_id | Optional | The **direction_id** field contains an ID that identifies the direction of travel for a trip. This value is referenced from the [trips.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#tripstxt) file. |
+| trip_id | Optional | The **trip_id** field contains an ID that uniquely identifies a trip. This value is referenced from the [trips.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#tripstxt) file. |
 | stop_id | Optional | The **stop_id** field contains an ID that uniquely identifies a stop. This value is referenced from the [stops.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stopstxt) file. |
 
 ### *__ride_feed_info.txt__*
