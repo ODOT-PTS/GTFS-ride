@@ -100,13 +100,16 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 | load_type | Optional | The **load_type** field specifies the state (arriving or departing) at which **current_load** is measured. If no value is given, **current_load** indicates arriving load |
 |   |  | * **0** - Arriving.  |
 |   |  | * **1** - Departing.  |
-| rack_down | Optional | The **rack_down** field indicated whether an external bike rack was deployed or remained down at the associated **stop_id**. This field should be used in conjunction with **bike_boardings** and **bike_alightings** if more detailed information is available. |
+| rack_down | Optional | The **rack_down** field indicated whether an external bike rack was deployed or remained down at the associated **stop_id**. This field should be used in conjunction with **bike_boardings** and **bike_alightings** if more boarding and alighting counts are available. |
 |   |  | * **0** - Bike rack retracted and/or stowed.  |
 |   |  | * **1** - Bike rack deployed and/or in use.  |
 | bike_boardings | Optional | The **bike_boardings** field contains the number of bike boardings at the identified stop and trip. This value represents both bikes racked externally and bikes brought inside the passenger compartment. Non-negative integer. |
 | bike_alightings | Optional | The **bike_alightings** field contains the number of bike alightings at the identified stop and trip. This value represents both bikes racked externally and bikes brought inside the passenger compartment. Non-negative integer. |
-| ramp_boardings | Optional | The **ramp_boardings** field contains the number of ramp or lift deployed boardings at the identified stop and trip. Non-negative integer. |
-| ramp_alightings | Optional | The **ramp_alightings** field contains the number of ramp or lift deployed alightings at the identified stop and trip. Non-negative integer. |
+| ramp_used | Optional | The **ramp_used** field indicated whether a ramp or lift was used at the associated **stop_id**. This field should be used in conjunction with **ramp_boardings** and **ramp_alightings** if more detailed boarding and alighting counts are available. |
+|   |  | * **0** - No ramp or lift used.  |
+|   |  | * **1** - Ramp of lift deployed.  |
+| ramp_boardings | Optional | The **ramp_boardings** field contains the total count of ramp or lift deployed boardings at the identified **stop_id**. Non-negative integer. |
+| ramp_alightings | Optional | The **ramp_alightings** field contains the number of ramp or lift deployed alightings at the identified **stop_id**. Non-negative integer. |
 | service_date | Optional | The **service_date** field contains the date of the associated boarding and/or alighting data at the identified stop. The format is YYYYMMDD. |
 | service_arrival_time | Optional | The **service_arrival_time** field contains the time of the actual arrival at the identified stop. The format is HH:MM:SS. |
 | service_departure_time | Optional | The **service_departure_time** field contains the time of the actual departure from the identified stop. The format is HH:MM:SS. |
