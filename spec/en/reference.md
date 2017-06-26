@@ -205,7 +205,7 @@ If an agency can associate supplementary ridership data with a specific rider, r
 
 File: **Optional**
 
-An agency may use the ridership.txt file to record aggregate level ridership counts depending on agency capabilities and requirements. If no Route ID or Trip ID is specified, the ridership count is system wide. If stop-level ridership counts are available, they should be recorded in board_alight.txt, but an agency may choose to also record the aggregated counts in ridership.txt to aid in meeting specific reporting requirements or in generating user-defined reports.  
+An agency may use the ridership.txt file to record aggregate level ridership counts depending on agency capabilities and requirements.  If stop-level ridership counts are available, they should be recorded in board_alight.txt, but an agency may choose to also record the aggregated counts in ridership.txt to aid in meeting specific reporting requirements or in generating user-defined reports. Many levels of speicificty of aggregation are available through the many possible combinations of ID, time, and date fields. 
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
