@@ -187,13 +187,14 @@ If an agency can associate supplementary ridership data with a specific rider, r
 |   |  | * **7** - RFID or smart card, agency-issued  |
 |   |  | * **8** - Magnetic strip card, open payment.  |
 |   |  | * **9** - RFID or smart card, open payment  |
-| accompanying_device | Optional | The **accompanying_device** field contains information on any accompanying mobility or medical devices of the unique rider. |
-|   |  | * **0** - No accompanying mobility devices.  |
+| accompanying_device | Optional | The **accompanying_device** field contains information on any accompanying mobility, medical, or assistance devices or aides of the unique rider. |
+|   |  | * **0** - No accompanying devices or aides.  |
 |   |  | * **1** - Accompanying bike.  |
 |   |  | * **2** - Accompanying wheelchair.  |
 |   |  | * **3** - Accompanying medical device.  |
 |   |  | * **4** - Accompanying service animal.  |
-|   |  | * **5** - Other accompanying device.  |
+|   |  | * **5** - Accompanying personal care attendant.  |
+|   |  | * **6** - Other accompanying device.  |
 | transfer_status | Optional | The **transfer_status** field contains the transfer status of the unique rider. |
 |   |  | * 0 - rider is not a transfer |
 |   |  | * 1 - rider is a transfer |
