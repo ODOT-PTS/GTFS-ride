@@ -94,8 +94,8 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 |   |  | * **6** - whole trip was added (as a replacement.)  |
 |   |  | * **7** - this **stop_time** was added to a scheduled trip.    |
 |   |  | * **8** - this **stop_time** was added to a scheduled trip (replacing something cancelled).    |
-| boardings | Optional | The **boardings** field contains the number of boardings at (or nearest to) the associated **stop_id** as collected by either automated or manual methods. Non-negative integer. |
-| alightings | Optional | The **alightings** field contains the number of alightings at (or nearest to) the associated **stop_id** as collected by either automated or manual methods. Less common than boarding data, this field is optional. Non-negative integer. |
+| boardings | Optional | The **boardings** field contains the number of boardings at (or nearest to, in the case of boardings inbetween stops ) the associated **stop_id** as collected by either automated or manual methods. Non-negative integer. |
+| alightings | Optional | The **alightings** field contains the number of alightings at (or nearest to, in the case of alightings inbetween stops) the associated **stop_id** as collected by either automated or manual methods. Non-negative integer. |
 | current_load | Optional | The **current_load** field contains the calculated percentage current load of a vehicle at the identified stop. The state at which **current_load** is measured, is specified by **load_type**; if no value is given in **load_type**, **current_load** is arriving load.  Non-negative integer.|
 | load_type | Optional | The **load_type** field specifies the state (arriving or departing) at which **current_load** is measured. If no value is given, **current_load** indicates arriving load |
 |   |  | * **0** - Arriving.  |
