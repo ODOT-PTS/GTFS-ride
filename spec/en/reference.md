@@ -76,13 +76,13 @@ _Only files unique to GTFS-ride are defined below. Definitions for all other fil
 
 File: **Optional**
 
-If an agency collects disaggregate, stop-level ridership data, board_alight.txt may be used to record ridership boarding counts and additional supplementary data. If only more aggregate ridership data is collected, the agency should use ridership.txt to record ridership counts.  It should be noted that unique combinations of stop_id and trip_id will not uniquely define a specific instance in time of arrival and boardings at a stop. Boardings and other counts will be aggregated across dates active as defined by a trip’s service_id. By including an optional timestamp, an agency can disaggregate counts to specifics instances of stop arrivals and boardings, and provide a calculated current load.
+If an agency collects disaggregate, stop-level ridership data,  [board_alight.txt](#board_alighttxt) may be used to record ridership boarding counts and additional supplementary data. If only more aggregate ridership data is collected, the agency should use [ridership.txt](#ridershiptxt) to record ridership counts.  It should be noted that unique combinations of **stop_id** and **trip_id** will not uniquely define a specific instance in time of arrival and boardings at a stop. Boardings and other counts will be aggregated across dates active as defined by a trip’s **service_id**. By including an optional timestamp, an agency can disaggregate counts to specifics instances of stop arrivals and boardings, and provide a calculated current load.
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
 | trip_id | **Required** | The **trip_id** contains an ID that uniquely identifies a trip. |
 | stop_id | **Required** | The **stop_id** contains an ID that uniquely identifies a stop. |
-| stop_sequence| **Required** | The **stop_sequence** identifies the order of the stops for a particular trip. Matches **stop_sequence** in _stop_times.txt_. Non-negative integer. |
+| stop_sequence| **Required** | The **stop_sequence** identifies the order of the stops for a particular trip. Matches **stop_sequence** in  [stop_times.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stop_timestxt). Non-negative integer. |
 | record_use | **Required** | The **record_use** field indicates the purpose of this record. Data in the fields **schedule_relationship**, **boardings**, and **alightings** should correspond to the selection for **record_use**.  |
 |   |  | * **0** - Entry contains complete ridership counts for the associated **stop_id** in the field(s) **boardings** and/or **alightings** as available. |
 |   |  | * **1** - Entry contains no ridership counts, but contains service cancellation data in **schedule_relationship**. |
@@ -126,7 +126,7 @@ If an agency collects disaggregate, stop-level ridership data, board_alight.txt 
 
 File: **Optional**
 
-The trip_capacity.txt file identifies the capacity of a vehicle operating a trip on a given day to support crowding analysis in conjunction with board_alight.txt.
+The [trip_capacity.txt](#trip_capacitytxt) file identifies the capacity of a vehicle operating a trip on a given day to support crowding analysis in conjunction with [board_alight.txt](#board_alighttxt).
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
@@ -143,7 +143,7 @@ The trip_capacity.txt file identifies the capacity of a vehicle operating a trip
 
 File: **Optional**
 
-If an agency can associate supplementary ridership data with a specific rider, rider_trip.txt may be used to record the rider-generated details. Care should be exercised in the creation of the rider_id field to sufficiently anonymize a rider’s identity. The rider_trip.txt file may be useful for origin/destination, rider demographic, fare structure, network configuration, transit equity, demand forecasting, and performance review studies. 
+If an agency can associate supplementary ridership data with a specific rider, [rider_trip.txt](#rider_triptxt) may be used to record the rider-generated details. Care should be exercised in the creation of the **rider_id** field to sufficiently anonymize a rider’s identity. The [rider_trip.txt](#rider_triptxt) file may be useful for origin/destination, rider demographic, fare structure, network configuration, transit equity, demand forecasting, and performance review studies. 
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
@@ -151,12 +151,12 @@ If an agency can associate supplementary ridership data with a specific rider, r
 | agency_id | Optional | The **agency_id** field contains the ID of the agency associated with the unique rider. This value is referenced from the [agency.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#agencytxt) file. Use this field when you are providing data from more than one agency.  |
 | trip_id | Optional | The **trip_id** field contains the ID of the trip associated with the unique rider, if this is known. If **trip_id** is empty then the rider may have taken one of several trips, or several possible chains of trips, to travel between the origin and the destination.   |
 | boarding_stop_id | Optional | The **boarding_stop_id** field contains the ID of the boarding stop associated with the unique rider. |
-| boarding_stop_sequence | Optional | The **boarding_stop_sequence** field identifies the order of the stop referenced **boarding_stop_id** within a particular trip. Matches **stop_sequence** in _stop_times.txt_. Non-negative integer. |
+| boarding_stop_sequence | Optional | The **boarding_stop_sequence** field identifies the order of the stop referenced **boarding_stop_id** within a particular trip. Matches **stop_sequence** in [stop_times.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stop_timestxt). Non-negative integer. |
 | alighting_stop_id | Optional | The **alighting_stop_id** field contains the ID of the alighting stop associated with the unique rider. |
-| alighting_stop_sequence | Optional | The **alighting_stop_sequence** field identifies the order of the stop referenced **alighting_stop_id** within a particular trip. Matches **stop_sequence** in _stop_times.txt_. Non-negative integer. |
+| alighting_stop_sequence | Optional | The **alighting_stop_sequence** field identifies the order of the stop referenced **alighting_stop_id** within a particular trip. Matches **stop_sequence** in [stop_times.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stop_timestxt). Non-negative integer. |
 | service_date | Optional | The **service_date** field contains the date of the boarding associated with the unique rider. |
-| boarding_time | Optional | The **boarding_time** field contains the time of the boarding associated with the unique rider. If the **trip_id** is included, **boarding_time** represents the time that the rider boarded the vehicle. It must be between **service_arrival_time** and **service_departure_time**, inclusive, of the trip’s stop in _board_alight.txt_ if applicable. If the trip_id is not included, **boarding_time** represents the time that the rider entered the transit network. |
-| alighting_time | Optional | The **alighting_time** field contains the time of the alighting associated with the unique rider. If the **trip_id** is included, **alighting_time** represents the time that the rider exited the vehicle. It must be between **service_arrival_time** and **service_departure_time**, inclusive, of the trip’s stop in _board_alight.txt_ if applicable. If the trip_id is not included, **alighting_time** represents the time that the rider left the transit network. |
+| boarding_time | Optional | The **boarding_time** field contains the time of the boarding associated with the unique rider. If the **trip_id** is included, **boarding_time** represents the time that the rider boarded the vehicle. It must be between **service_arrival_time** and **service_departure_time**, inclusive, of the trip’s stop in [board_alight.txt](#board_alighttxt) if applicable. If the trip_id is not included, **boarding_time** represents the time that the rider entered the transit network. |
+| alighting_time | Optional | The **alighting_time** field contains the time of the alighting associated with the unique rider. If the **trip_id** is included, **alighting_time** represents the time that the rider exited the vehicle. It must be between **service_arrival_time** and **service_departure_time**, inclusive, of the trip’s stop in [board_alight.txt](#board_alighttxt) if applicable. If the trip_id is not included, **alighting_time** represents the time that the rider left the transit network. |
 | rider_type | Optional | The **rider_type** field contains information on the rider type of the unique rider. |
 |   |  | * **0** - No special rider type.  |
 |   |  | * **1** - Senior.  |
@@ -205,7 +205,7 @@ If an agency can associate supplementary ridership data with a specific rider, r
 
 File: **Optional**
 
-An agency may use the ridership.txt file to record aggregate level ridership counts depending on agency capabilities and requirements.  If stop-level ridership counts are available, they should be recorded in board_alight.txt, but an agency may choose to also record the aggregated counts in ridership.txt to aid in meeting specific reporting requirements or in generating user-defined reports. Many levels of speicificty of aggregation are available through the many possible combinations of ID, time, and date fields. 
+An agency may use the [ridership.txt](#ridershiptxt) file to record aggregate level ridership counts depending on agency capabilities and requirements.  If stop-level ridership counts are available, they should be recorded in [board_alight.txt](#board_alighttxt), but an agency may choose to also record the aggregated counts in [ridership.txt](#ridershiptxt) to aid in meeting specific reporting requirements or in generating user-defined reports. Many levels of speicificty of aggregation are available through the many possible combinations of ID, time, and date fields. 
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
@@ -215,7 +215,7 @@ An agency may use the ridership.txt file to record aggregate level ridership cou
 | ridership_end_date | **Required** | The **ridership_end_date** field contains the date of the end of the rideship count. **ridership_end_date** may be the same date or later than **ridership_start_date**. |
 | ridership_start_time | Optional | The **ridership_start_time** field contains the time of the start of the rideship count on the date specified in **ridership_start_date**. The time format is HH:MM:SS. |
 | ridership_end_time | Optional | The **ridership_end_time** field contains the time of the end of the rideship count on the date specified in **ridership_end_date**. If **ridership_start_date** and **ridership_end_date** are the same, **ridership_end_time** must be later than **ridership_start_time**. |
-| service_id | Optional | The **service_id** field contains an ID that uniquely identifies a set of dates over which to aggregate ridership. This value is referenced from the [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt) file. The **ridership_start_date** to **ridership_end_date** date range must fully contain the date range specified for the associated **service_id** through the **start_date** and **end_date** fields of _calendar.txt_.  Use this field to indicate aggregation of ridership over day-of-the-week sets preexisting in GTFS service IDs. To aggregate over custom day-of-the-week sets within the **ridership_start_date** to **ridership_end_date** date range, use the following binary date selection fields.   |
+| service_id | Optional | The **service_id** field contains an ID that uniquely identifies a set of dates over which to aggregate ridership. This value is referenced from the [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt) file. The **ridership_start_date** to **ridership_end_date** date range must fully contain the date range specified for the associated **service_id** through the **start_date** and **end_date** fields of [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt).  Use this field to indicate aggregation of ridership over day-of-the-week sets preexisting in GTFS service IDs. To aggregate over custom day-of-the-week sets within the **ridership_start_date** to **ridership_end_date** date range, use the following binary date selection fields.   |
 | monday | Optional | The **monday** field contains a binary value that indicates whether or not ridership for all Mondays within the given date range is included in the aggregate counts. |
 |   |  | * **0** - Monday ridership is not included in the ridership counts. |
 |   |  | * **1** - Monday ridership is included in the ridership counts. |
@@ -247,7 +247,7 @@ An agency may use the ridership.txt file to record aggregate level ridership cou
 
 File: **Required**
 
-This file is similar to the GTFS feed_info.txt, but with a specific focus on metadata for the additional ridership files.
+This file is similar to the GTFS  [feed_info.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#feed_infotxt), but with a specific focus on metadata for the additional ridership files.
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
@@ -259,8 +259,8 @@ This file is similar to the GTFS feed_info.txt, but with a specific focus on met
 |   |  | * **4** - board_alight and ridership |
 |   |  | * **5** - rider_trip and ridership |
 |   |  | * **6** - board_alight, rider_trip, and ridership |
-| ride_start_date | Optional | The **ride_start_date** field indicates the earliest date for the ridership data contained in the fileset. The date may match or be later than the **feed_start_date** of _feed_info.txt_. The date format is YYYYMMDD. |
-| ride_end_date | Optional | The **ride_end_date** field indicates the latest data for the ridership data contained in the fileset. It must be later than the **ride_start_date** and either match or be earlier than the **feed_end_date** of _feed_info.txt_. |
-| gtfs_feed_date | Optional | The **gtfs_feed_date** indicates the date the GTFS files contained in the GTFS-ride fileset were fetched as the current GTFS feed. If **feed_version** is not included in _feed_info.txt_, **gtfs_feed_date** allows association of GTFS files to when they were supplied as current.
+| ride_start_date | Optional | The **ride_start_date** field indicates the earliest date for the ridership data contained in the fileset. The date may match or be later than the **feed_start_date** of  [feed_info.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#feed_infotxt). The date format is YYYYMMDD. |
+| ride_end_date | Optional | The **ride_end_date** field indicates the latest data for the ridership data contained in the fileset. It must be later than the **ride_start_date** and either match or be earlier than the **feed_end_date** of  [feed_info.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#feed_infotxt). |
+| gtfs_feed_date | Optional | The **gtfs_feed_date** indicates the date the GTFS files contained in the GTFS-ride fileset were fetched as the current GTFS feed. If **feed_version** is not included in  [feed_info.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#feed_infotxt), **gtfs_feed_date** allows association of GTFS files to when they were supplied as current.
 | default_currency_type | Optional | The **default_currency_type** defines the default currency used  as payment. Please use the ISO 4217 alphabetical currency codes which can be found at the following URL: http://en.wikipedia.org/wiki/ISO_4217. |
 | ride_feed_version | Optional | The **ride_feed_version** is a feed publisher string used to determine the sequence of feed publication. It can be used to represent the most current data for feeds covering the same period.
