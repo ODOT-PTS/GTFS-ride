@@ -150,7 +150,7 @@ If an agency can associate supplementary ridership data with a specific rider, r
 |   |  | * **7** - customer was charged a fare but did not pay.  |
 |   |  | * **8** - Other.  |
 | fare_media | Optional | The **fare_media** field indicates what media was used to pay the fare. |
-|   |  | * **0** - (or blank) Not applicable or unknown.  |
+|   |  | * **0** - Not applicable or unknown.  |
 |   |  | * **1** - Cash.  |
 |   |  | * **2** - Paper transfer, single-use paper ticket, or token.  |
 |   |  | * **3** - Paper flash pass (visual inspection).  |
