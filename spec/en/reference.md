@@ -130,7 +130,7 @@ The trip_capacity.txt file identifies the capacity of a vehicle operating a trip
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
-| agency_id | Optional | The **agency_id** field contains the ID of the agency associated with the capacity data. This value is referenced from the agency.txt file. Use this field when you are providing data from more than one agency.  |
+| agency_id | Optional | The **agency_id** field contains the ID of the agency associated with the capacity data. This value is referenced from the [agency.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#agencytxt) file. Use this field when you are providing data from more than one agency.  |
 | trip_id | Optional | The **trip_id** field contains an id that uniquely identifies a trip. If an agency has only one type of vehicle, or operated only one type of vehicle on the given **service_date**, it can leave **trip_id** blank to specify capacity of all trips with one record.    |
 | service_date | Optional | The **service_date** field contains the date of the trip. If an agency has only one type of vehicle, or only ever operates one type of vehicle on the given trip, it can leave **service_date** blank to specify capacity of all dates with one record. The format is YYYYMMDD. |
 | vehicle_description | Optional | The **vehicle_description** field contains the additional information about the vehicle associated with **trip_id** and **service_date** needed for analysis or reporting. |
@@ -148,7 +148,7 @@ If an agency can associate supplementary ridership data with a specific rider, r
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
 | rider_id | **Required** | The **rider_id** field contains the ID of a unique rider. The **rider_id** is dataset unique. |
-| agency_id | Optional | The **agency_id** field contains the ID of the agency associated with the unique rider. This value is referenced from the agency.txt file. Use this field when you are providing data from more than one agency.  |
+| agency_id | Optional | The **agency_id** field contains the ID of the agency associated with the unique rider. This value is referenced from the [agency.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#agencytxt) file. Use this field when you are providing data from more than one agency.  |
 | trip_id | Optional | The **trip_id** field contains the ID of the trip associated with the unique rider, if this is known. If **trip_id** is empty then the rider may have taken one of several trips, or several possible chains of trips, to travel between the origin and the destination.   |
 | boarding_stop_id | Optional | The **boarding_stop_id** field contains the ID of the boarding stop associated with the unique rider. |
 | boarding_stop_sequence | Optional | The **boarding_stop_sequence** field identifies the order of the stop referenced **boarding_stop_id** within a particular trip. Matches **stop_sequence** in _stop_times.txt_. Non-negative integer. |
