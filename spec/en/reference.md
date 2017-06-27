@@ -46,7 +46,7 @@ This specification includes the following files along with their associated cont
 |  [*__board_alight.txt__*](#board_alighttxt) | Optional | Tracks boardings/alightings along with associated information at stop-level. |
 |  [*__trip_capacity.txt__*](#trip_capacitytxt) | Optional | Provides the capability to identify the capacities of vehicles used to provide service. |
 |  [*__rider_trip.txt__*](#rider_triptxt) | Optional | Includes anonymized data about specific riders' trip. |
-|  [*__ridership.txt__*](#ridershiptxt) | Optional | Route or Trip level counts of ridership. |
+|  [*__ridership.txt__*](#ridershiptxt) | Optional | Provides the capability to supply ridership counts at various levels of aggregation. |
 |  [*__ride_feed_info.txt__*](#ride_feed_infotxt) | **Required** | Information specific to the source and attributes of the addional ridership files. |
 
 ## File Requirements
