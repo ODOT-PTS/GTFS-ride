@@ -149,7 +149,7 @@ If an agency can associate supplementary ridership data with a specific rider, [
 |  ------ | ------ | ------ |
 | rider_id | **Required** | The **rider_id** field contains the ID of a unique rider. The **rider_id** is dataset unique. |
 | agency_id | Optional | The **agency_id** field contains the ID of the agency associated with the unique rider. This value is referenced from the [agency.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#agencytxt) file. Use this field when you are providing data from more than one agency.  |
-| trip_id | Optional | The **trip_id** field contains the ID of the trip associated with the unique rider, if this is known. If **trip_id** is empty then the rider may have taken one of several trips, or several possible chains of trips, to travel between the origin and the destination.   |
+| trip_id | Optional | The **trip_id** field contains the ID of the trip associated with the unique rider, if this is known. If **trip_id** is empty, then the rider may have taken one of several trips, or several possible chains of trips, to travel between the origin and the destination.   |
 | boarding_stop_id | Optional | The **boarding_stop_id** field contains the ID of the boarding stop associated with the unique rider. |
 | boarding_stop_sequence | Optional | The **boarding_stop_sequence** field identifies the order of the stop referenced **boarding_stop_id** within a particular trip. Matches **stop_sequence** in [stop_times.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stop_timestxt). Non-negative integer. |
 | alighting_stop_id | Optional | The **alighting_stop_id** field contains the ID of the alighting stop associated with the unique rider. |
@@ -216,25 +216,25 @@ An agency may use the [ridership.txt](#ridershiptxt) file to record aggregate le
 | ridership_start_time | Optional | The **ridership_start_time** field contains the time of the start of the rideship count on the date specified in **ridership_start_date**. The time format is HH:MM:SS. |
 | ridership_end_time | Optional | The **ridership_end_time** field contains the time of the end of the rideship count on the date specified in **ridership_end_date**. If **ridership_start_date** and **ridership_end_date** are the same, **ridership_end_time** must be later than **ridership_start_time**. |
 | service_id | Optional | The **service_id** field contains an ID that uniquely identifies a set of dates over which to aggregate ridership. This value is referenced from the [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt) file. The **ridership_start_date** to **ridership_end_date** date range must fully contain the date range specified for the associated **service_id** through the **start_date** and **end_date** fields of [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt).  Use this field to indicate aggregation of ridership over day-of-the-week sets preexisting in GTFS service IDs. To aggregate over custom day-of-the-week sets within the **ridership_start_date** to **ridership_end_date** date range, use the following binary date selection fields.   |
-| monday | Optional | The **monday** field contains a binary value that indicates whether or not ridership for all Mondays within the given date range is included in the aggregate counts. |
+| monday | Optional | The **monday** field contains a binary value that indicates whether or not ridership for all Mondays within the given date range are included in the aggregate counts. |
 |   |  | * **0** - Monday ridership is not included in the ridership counts. |
 |   |  | * **1** - Monday ridership is included in the ridership counts. |
-| tuesday | Optional | The **tuesday** field contains a binary value that indicates whether or not ridership for all Tuesdays within the given date range is included in the aggregate counts. |
+| tuesday | Optional | The **tuesday** field contains a binary value that indicates whether or not ridership for all Tuesdays within the given date range are included in the aggregate counts. |
 |   |  | * **0** - Tuesday ridership is not included in the ridership counts. |
 |   |  | * **1** - Tuesday ridership is included in the ridership counts. |
-| wednesday | Optional | The **wednesday** field contains a binary value that indicates whether or not ridership for all Wednesdays within the given date range is included in the aggregate counts. |
+| wednesday | Optional | The **wednesday** field contains a binary value that indicates whether or not ridership for all Wednesdays within the given date range are included in the aggregate counts. |
 |   |  | * **0** - Wednesday ridership is not included in the ridership counts. |
 |   |  | * **1** - Wednesday ridership is included in the ridership counts. |
-| thursday | Optional | The **thursday** field contains a binary value that indicates whether or not ridership for all Thursdays within the given date range is included in the aggregate counts. |
+| thursday | Optional | The **thursday** field contains a binary value that indicates whether or not ridership for all Thursdays within the given date range are included in the aggregate counts. |
 |   |  | * **0** - Thursday ridership is not included in the ridership counts. |
 |   |  | * **1** - Thursday ridership is included in the ridership counts. |
-| friday | Optional | The **friday** field contains a binary value that indicates whether or not ridership for all Fridays within the given date range is included in the aggregate counts. |
+| friday | Optional | The **friday** field contains a binary value that indicates whether or not ridership for all Fridays within the given date range are included in the aggregate counts. |
 |   |  | * **0** - Friday ridership is not included in the ridership counts. |
 |   |  | * **1** - Friday ridership is included in the ridership counts. |
-| saturday | Optional | The **saturday** field contains a binary value that indicates whether or not ridership for all Saturdays within the given date range is included in the aggregate counts. |
+| saturday | Optional | The **saturday** field contains a binary value that indicates whether or not ridership for all Saturdays within the given date range are included in the aggregate counts. |
 |   |  | * **0** - Saturday ridership is not included in the ridership counts. |
 |   |  | * **1** - Saturday ridership is included in the ridership counts. |
-| sunday | Optional | The **sunday** field contains a binary value that indicates whether or not ridership for all Sundays within the given date range is included in the aggregate counts. |
+| sunday | Optional | The **sunday** field contains a binary value that indicates whether or not ridership for all Sundays within the given date range are included in the aggregate counts. |
 |   |  | * **0** - Sunday ridership is not included in the ridership counts. |
 |   |  | * **1** - Sunday ridership is included in the ridership counts. |
 | agency_id | Optional | The **agency_id** field contains an ID that uniquely identifies an agency. This value is referenced from the [agency.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#agencytxt) file.   |
@@ -260,7 +260,7 @@ This file is similar to the GTFS  [feed_info.txt](https://github.com/google/tran
 |   |  | * **5** - rider_trip and ridership |
 |   |  | * **6** - board_alight, rider_trip, and ridership |
 | ride_start_date | Optional | The **ride_start_date** field indicates the earliest date for the ridership data contained in the fileset. The date may match or be later than the **feed_start_date** of  [feed_info.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#feed_infotxt). The date format is YYYYMMDD. |
-| ride_end_date | Optional | The **ride_end_date** field indicates the latest data for the ridership data contained in the fileset. It must be later than the **ride_start_date** and either match or be earlier than the **feed_end_date** of  [feed_info.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#feed_infotxt). |
+| ride_end_date | Optional | The **ride_end_date** field indicates the latest date for the ridership data contained in the fileset. It must be later than the **ride_start_date** and either match or be earlier than the **feed_end_date** of  [feed_info.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#feed_infotxt). |
 | gtfs_feed_date | Optional | The **gtfs_feed_date** indicates the date the GTFS files contained in the GTFS-ride fileset were fetched as the current GTFS feed. If **feed_version** is not included in  [feed_info.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#feed_infotxt), **gtfs_feed_date** allows association of GTFS files to when they were supplied as current.
 | default_currency_type | Optional | The **default_currency_type** defines the default currency used  as payment. Please use the ISO 4217 alphabetical currency codes which can be found at the following URL: http://en.wikipedia.org/wiki/ISO_4217. |
 | ride_feed_version | Optional | The **ride_feed_version** is a feed publisher string used to determine the sequence of feed publication. It can be used to represent the most current data for feeds covering the same period.
