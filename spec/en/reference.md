@@ -96,18 +96,18 @@ If an agency collects disaggregate, stop-level ridership data,  [board_alight.tx
 |   |  | * **6** - whole trip was added (as a replacement.)  |
 |   |  | * **7** - this **stop_time** was added to a scheduled trip.    |
 |   |  | * **8** - this **stop_time** was added to a scheduled trip (replacing something cancelled).    |
-| boardings | Optional | The **boardings** field contains the number of boardings at (or nearest to, in the case of boardings inbetween stops ) the associated **stop_id** as collected by either automated or manual methods. Non-negative integer. |
-| alightings | Optional | The **alightings** field contains the number of alightings at (or nearest to, in the case of alightings inbetween stops) the associated **stop_id** as collected by either automated or manual methods. Non-negative integer. |
+| boardings | Optional | The **boardings** field contains the number of boardings at (or nearest to, in the case of boardings between stops ) the associated **stop_id** as collected by either automated or manual methods. Non-negative integer. |
+| alightings | Optional | The **alightings** field contains the number of alightings at (or nearest to, in the case of alightings between stops) the associated **stop_id** as collected by either automated or manual methods. Non-negative integer. |
 | current_load | Optional | The **current_load** field contains the calculated percentage current load of a vehicle at the identified stop. The state at which **current_load** is measured, is specified by **load_type**; if no value is given in **load_type**, **current_load** is arriving load.  Non-negative integer.|
 | load_type | Optional | The **load_type** field specifies the state (arriving or departing) at which **current_load** is measured. If no value is given, **current_load** indicates arriving load |
 |   |  | * **0** - Arriving.  |
 |   |  | * **1** - Departing.  |
-| rack_down | Optional | The **rack_down** field indicated whether an external bike rack was deployed or remained down at the associated **stop_id**. This field should be used in conjunction with **bike_boardings** and **bike_alightings** if complete bike boarding and alighting counts are available. |
+| rack_down | Optional | The **rack_down** field indicates whether an external bike rack was deployed or remained down at the associated **stop_id**. This field should be used in conjunction with **bike_boardings** and **bike_alightings** if complete bike boarding and alighting counts are available. |
 |   |  | * **0** - Bike rack retracted and/or stowed.  |
 |   |  | * **1** - Bike rack deployed and/or in use.  |
 | bike_boardings | Optional | The **bike_boardings** field contains the total count of bike boardings at the identified stop and trip. This value represents both bikes racked externally and bikes brought inside the passenger compartment. Non-negative integer. |
 | bike_alightings | Optional | The **bike_alightings** field contains the total count of bike alightings at the identified stop and trip. This value represents both bikes racked externally and bikes brought inside the passenger compartment. Non-negative integer. |
-| ramp_used | Optional | The **ramp_used** field indicated whether a ramp or lift was used at the associated **stop_id**. This field should be used in conjunction with **ramp_boardings** and **ramp_alightings** if complete ramp/lift boarding and alighting counts are available. |
+| ramp_used | Optional | The **ramp_used** field indicates whether a ramp or lift was used at the associated **stop_id**. This field should be used in conjunction with **ramp_boardings** and **ramp_alightings** if complete ramp/lift boarding and alighting counts are available. |
 |   |  | * **0** - No ramp/lift used.  |
 |   |  | * **1** - Ramp/lift deployed.  |
 | ramp_boardings | Optional | The **ramp_boardings** field contains the total count of ramp or lift deployed boardings at the identified **stop_id**. Non-negative integer. |
