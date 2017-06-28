@@ -26,7 +26,7 @@ _Retrieved from GTFS [https://github.com/google/transit/blob/master/gtfs/spec/en
 
 ## Feed Files
 
-This specification includes the following files along with their associated content. **Bolded** files are unique to GTFS-ride, while the rest reference GTFS files. GTFS-ride follows, and by delfault adopts, changes in GTFS files already specified in GTFS-ride. If a new file is added to GTFS, its inclusion in GTFS-ride will follow the change process specified for any change to GTFS-ride. More information on the GTFS files may be found at [https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md).
+This specification includes the following files along with their associated content. **Bolded** files are unique to GTFS-ride, while the rest reference GTFS files. GTFS-ride follows, and by default adopts, changes in GTFS files already specified in GTFS-ride. If a new file is added to GTFS, its inclusion in GTFS-ride will follow the change process specified for any change to GTFS-ride. More information on the GTFS files may be found at [https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md).
 
 |  Filename | Required | Defines |
 |  ------ | ------ | ------ |
@@ -131,8 +131,8 @@ The [trip_capacity.txt](#trip_capacitytxt) file identifies the capacity of a veh
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
 | agency_id | Optional | The **agency_id** field contains the ID of the agency associated with the capacity data. This value is referenced from the [agency.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#agencytxt) file. Use this field when you are providing data from more than one agency.  |
-| trip_id | Optional | The **trip_id** field contains an id that uniquely identifies a trip. If an agency has only one type of vehicle, or operated only one type of vehicle on the given **service_date**, it can leave **trip_id** blank to specify capacity of all trips with one record.    |
-| service_date | Optional | The **service_date** field contains the date of the trip. If an agency has only one type of vehicle, or only ever operates one type of vehicle on the given trip, it can leave **service_date** blank to specify capacity of all dates with one record. The format is YYYYMMDD. |
+| trip_id | Optional | The **trip_id** field contains an id that uniquely identifies a trip. If an agency has only one type of vehicle, or operated only one type of vehicle on the given **service_date**, it can leave **trip_id** blank to specify the capacity of all trips with one record.    |
+| service_date | Optional | The **service_date** field contains the date of the trip. If an agency has only one type of vehicle, or only ever operates one type of vehicle on the given trip, it can leave **service_date** blank to specify the capacity of all dates with one record. The format is YYYYMMDD. |
 | vehicle_description | Optional | The **vehicle_description** field contains the additional information about the vehicle(s) associated with **agency_id**, **trip_id**, and/or **service_date** needed for analysis or reporting. |
 | seated_capacity | Optional | The **seated_capacity** field contains the number of passenger seats.  Non-negative integer.|
 | standing_capacity | Optional | The **standing_capacity** field contains the maximum number of standees according to agency policy.  Non-negative integer.|
@@ -205,36 +205,36 @@ If an agency can associate supplementary ridership data with a specific rider, [
 
 File: **Optional**
 
-An agency may use the [ridership.txt](#ridershiptxt) file to record aggregate level ridership counts depending on agency capabilities and requirements.  If stop-level ridership counts are available, they should be recorded in [board_alight.txt](#board_alighttxt), but an agency may choose to also record the aggregated counts in [ridership.txt](#ridershiptxt) to aid in meeting specific reporting requirements or in generating user-defined reports. Many levels of speicificty of aggregation are available through the many possible combinations of ID, time, and date fields. 
+An agency may use the [ridership.txt](#ridershiptxt) file to record aggregate level ridership counts depending on agency capabilities and requirements.  If stop-level ridership counts are available, they should be recorded in [board_alight.txt](#board_alighttxt), but an agency may choose to also record the aggregated counts in [ridership.txt](#ridershiptxt) to aid in meeting specific reporting requirements or in generating user-defined reports. Many levels of specificity of aggregation are available through the many possible combinations of ID, time, and date fields. 
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
 | total_boardings | **Required** | The **total_boardings** field contains the total count (not a daily average) of all boardings for the identified service or stops for the period indicated. A record without a **stop_id** should have both **total_boardings** and **total_alightings**, and they should be equal; a record with a **stop_id** must have at least one of the two. Non-negative integer. |
 | total_alightings | **Required** | The **total_alightings** field contains total count (not a daily average) of all alightings for the identified service or stops for the period indicated. A record without a **stop_id** should have both **total_boardings** and **total_alightings**, and they should be equal; a record with a **stop_id** must have at least one of the two. Non-negative integer. |
-| ridership_start_date | **Required** | The **ridership_start_date** field contains the date of the start of the rideship count. The date format is YYYYMMDD. |
-| ridership_end_date | **Required** | The **ridership_end_date** field contains the date of the end of the rideship count. **ridership_end_date** may be the same date or later than **ridership_start_date**. |
-| ridership_start_time | Optional | The **ridership_start_time** field contains the time of the start of the rideship count on the date specified in **ridership_start_date**. The time format is HH:MM:SS. |
-| ridership_end_time | Optional | The **ridership_end_time** field contains the time of the end of the rideship count on the date specified in **ridership_end_date**. If **ridership_start_date** and **ridership_end_date** are the same, **ridership_end_time** must be later than **ridership_start_time**. |
+| ridership_start_date | **Required** | The **ridership_start_date** field contains the date of the start of the ridership count. The date format is YYYYMMDD. |
+| ridership_end_date | **Required** | The **ridership_end_date** field contains the date of the end of the ridership count. **ridership_end_date** may be the same date or later than **ridership_start_date**. |
+| ridership_start_time | Optional | The **ridership_start_time** field contains the time of the start of the ridership count on the date specified in **ridership_start_date**. The time format is HH:MM:SS. |
+| ridership_end_time | Optional | The **ridership_end_time** field contains the time of the end of the ridership count on the date specified in **ridership_end_date**. If **ridership_start_date** and **ridership_end_date** are the same, **ridership_end_time** must be later than **ridership_start_time**. |
 | service_id | Optional | The **service_id** field contains an ID that uniquely identifies a set of dates over which to aggregate ridership. This value is referenced from the [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt) file. The **ridership_start_date** to **ridership_end_date** date range must fully contain the date range specified for the associated **service_id** through the **start_date** and **end_date** fields of [calendar.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#calendartxt).  Use this field to indicate aggregation of ridership over day-of-the-week sets preexisting in GTFS service IDs. To aggregate over custom day-of-the-week sets within the **ridership_start_date** to **ridership_end_date** date range, use the following binary date selection fields.   |
-| monday | Optional | The **monday** field contains a binary value that indicates whether or not ridership for all Mondays within the given date range are included in the aggregate counts. |
+| monday | Optional | The **monday** field contains a binary value that indicates whether or not ridership for all Mondays within the given date range is included in the aggregate counts. |
 |   |  | * **0** - Monday ridership is not included in the ridership counts. |
 |   |  | * **1** - Monday ridership is included in the ridership counts. |
-| tuesday | Optional | The **tuesday** field contains a binary value that indicates whether or not ridership for all Tuesdays within the given date range are included in the aggregate counts. |
+| tuesday | Optional | The **tuesday** field contains a binary value that indicates whether or not ridership for all Tuesdays within the given date range is included in the aggregate counts. |
 |   |  | * **0** - Tuesday ridership is not included in the ridership counts. |
 |   |  | * **1** - Tuesday ridership is included in the ridership counts. |
-| wednesday | Optional | The **wednesday** field contains a binary value that indicates whether or not ridership for all Wednesdays within the given date range are included in the aggregate counts. |
+| wednesday | Optional | The **wednesday** field contains a binary value that indicates whether or not ridership for all Wednesdays within the given date range is included in the aggregate counts. |
 |   |  | * **0** - Wednesday ridership is not included in the ridership counts. |
 |   |  | * **1** - Wednesday ridership is included in the ridership counts. |
-| thursday | Optional | The **thursday** field contains a binary value that indicates whether or not ridership for all Thursdays within the given date range are included in the aggregate counts. |
+| thursday | Optional | The **thursday** field contains a binary value that indicates whether or not ridership for all Thursdays within the given date range is included in the aggregate counts. |
 |   |  | * **0** - Thursday ridership is not included in the ridership counts. |
 |   |  | * **1** - Thursday ridership is included in the ridership counts. |
-| friday | Optional | The **friday** field contains a binary value that indicates whether or not ridership for all Fridays within the given date range are included in the aggregate counts. |
+| friday | Optional | The **friday** field contains a binary value that indicates whether or not ridership for all Fridays within the given date range is included in the aggregate counts. |
 |   |  | * **0** - Friday ridership is not included in the ridership counts. |
 |   |  | * **1** - Friday ridership is included in the ridership counts. |
-| saturday | Optional | The **saturday** field contains a binary value that indicates whether or not ridership for all Saturdays within the given date range are included in the aggregate counts. |
+| saturday | Optional | The **saturday** field contains a binary value that indicates whether or not ridership for all Saturdays within the given date range is included in the aggregate counts. |
 |   |  | * **0** - Saturday ridership is not included in the ridership counts. |
 |   |  | * **1** - Saturday ridership is included in the ridership counts. |
-| sunday | Optional | The **sunday** field contains a binary value that indicates whether or not ridership for all Sundays within the given date range are included in the aggregate counts. |
+| sunday | Optional | The **sunday** field contains a binary value that indicates whether or not ridership for all Sundays within the given date range is included in the aggregate counts. |
 |   |  | * **0** - Sunday ridership is not included in the ridership counts. |
 |   |  | * **1** - Sunday ridership is included in the ridership counts. |
 | agency_id | Optional | The **agency_id** field contains an ID that uniquely identifies an agency. This value is referenced from the [agency.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#agencytxt) file.   |
