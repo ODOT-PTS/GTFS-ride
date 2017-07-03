@@ -143,7 +143,7 @@ The [trip_capacity.txt](#trip_capacitytxt) file identifies the capacity of a veh
 
 File: **Optional**
 
-If an agency can associate supplementary ridership data with a specific rider, [rider_trip.txt](#rider_triptxt) may be used to record the rider-generated details. Care should be exercised in the creation of the **rider_id** field to sufficiently anonymize a rider’s identity. The [rider_trip.txt](#rider_triptxt) file may be useful for origin/destination, rider demographic, fare structure, network configuration, transit equity, demand forecasting, and performance review studies. 
+If an agency can associate supplementary ridership data with a specific rider, [rider_trip.txt](#rider_triptxt) may be used to record the rider-generated details. Care should be taken to consider privacy implications of collecting or sharing rider related information. The [rider_trip.txt](#rider_triptxt) file may be useful for origin/destination, rider demographic, fare structure, network configuration, transit equity, demand forecasting, and performance review studies. 
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
