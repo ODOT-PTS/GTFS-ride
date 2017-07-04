@@ -12,4 +12,4 @@ This process shall be revised following issue of initial draft to accommodate gr
 
 ### Changelog
 
-*Only once  draft is published will changes be tracked here*
+* July 14, 2017 - Initial release.
