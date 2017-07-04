@@ -1,6 +1,6 @@
 ## GTFS-ride
 
-**Initial draft pending. See [Revision History](../../CHANGES.md) for more details.**
+**Current version published `July 14, 2017`. See [Revision History](../../CHANGES.md) for more details.**
 
 This document explains the types of files that comprise a GTFS-ride dataset and defines the fields used in all of those files. The bolded files are those unique to GTFS-ride. They are not included in standard GTFS.
 
