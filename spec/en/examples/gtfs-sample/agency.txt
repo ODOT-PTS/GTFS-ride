@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone
+RIDE,GTFS-ride Transit,https://github.com/ODOT-PTS/GTFS-ride/,America/Los_Angeles
