@@ -87,15 +87,15 @@ If an agency collects disaggregate, stop-level ridership data,  [board_alight.tx
 |   |  | * **0** - Entry contains complete ridership counts for the associated **stop_id** in the field(s) **boardings** and/or **alightings** as available. |
 |   |  | * **1** - Entry contains no ridership counts, but contains service cancellation data in **schedule_relationship**. |
 | schedule_relationship | Optional | The **schedule_relationship** field identifies whether service was scheduled and operated, or scheduled but not operated, or operated but not scheduled. If a trip is added it must have a **trip_id** that is not scheduled to run on that day and is unique among trips added on that day.  |
-|   |  | * **0** - (or empty) Service was scheduled and operated. |
-|   |  | * **1** - whole scheduled trip was cancelled.  |
-|   |  | * **2** - whole scheduled trip was cancelled (but replaced with an added trip).  |
-|   |  | * **3** - trip ran but this **stop_time** was cancelled.   |
-|   |  | * **4** - trip ran but this **stop_time** was cancelled (but replaced with a different stop).  |
-|   |  | * **5** - whole trip was added. |
-|   |  | * **6** - whole trip was added (as a replacement.)  |
-|   |  | * **7** - this **stop_time** was added to a scheduled trip.    |
-|   |  | * **8** - this **stop_time** was added to a scheduled trip (replacing something cancelled).    |
+|   |  | * **0** - Service was scheduled and operated. |
+|   |  | * **1** - Whole scheduled trip was cancelled.  |
+|   |  | * **2** - Whole scheduled trip was cancelled, but replaced with an added trip.  |
+|   |  | * **3** - Trip ran but this **stop_time** was cancelled.   |
+|   |  | * **4** - Trip ran but this **stop_time** was cancelled, but replaced with a different stop.  |
+|   |  | * **5** - Whole trip was added. |
+|   |  | * **6** - Whole trip was added as a replacement.  |
+|   |  | * **7** - This **stop_time** was added to a scheduled trip.    |
+|   |  | * **8** - This **stop_time** was added to a scheduled trip, replacing something cancelled.    |
 | boardings | Optional | The **boardings** field contains the number of boardings at (or nearest to, in the case of boardings between stops ) the associated **stop_id** as collected by either automated or manual methods. Non-negative integer. |
 | alightings | Optional | The **alightings** field contains the number of alightings at (or nearest to, in the case of alightings between stops) the associated **stop_id** as collected by either automated or manual methods. Non-negative integer. |
 | current_load | Optional | The **current_load** field contains the calculated percentage current load of a vehicle at the identified stop. The state at which **current_load** is measured, is specified by **load_type**; if no value is given in **load_type**, **current_load** is arriving load.  Non-negative integer.|
