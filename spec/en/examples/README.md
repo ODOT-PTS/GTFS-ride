@@ -1,3 +1,3 @@
 ## Example GTFS-ride Fileset
 
-An example of a GTFS-ride fileset shall be posted to demonstrate structure of standard. An example will be issued alongside initial draft release of the standard.
+Examples of GTFS-ride filesets are provided to aid users in understanding structure and troubleshooting GTFS-ride. Two examples are available: a ["simple" example](https://github.com/ODOT-PTS/GTFS-ride/blob/master/spec/en/examples/ride_sample_simple.zip) that uses near-minimum inputs in all the GTFS-ride files, and an ["all" example](https://github.com/ODOT-PTS/GTFS-ride/blob/master/spec/en/examples/ride_sample_all.zip) that uses each attribute in GTFS-ride at least once. The files constituting the examples may be found in this directory separated by [GTFS files](https://github.com/ODOT-PTS/GTFS-ride/tree/master/spec/en/examples/gtfs-sample) and [GTFS-ride files](https://github.com/ODOT-PTS/GTFS-ride/tree/master/spec/en/examples/ride-specific).
