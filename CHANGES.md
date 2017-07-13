@@ -13,7 +13,7 @@ There are multiple reasons why a change to GTFS-ride may occur: security vulnera
 * If a change is desired, and the exact change to the code is known, a branch should be created implementing the change where applicable (i.e. documentation, specification, etc.). The initiator of the change will create a pull request for the modified branch.
 
 ### Pull request
-* Once a pull request in made, voting will occur for a minimum of 7 business days.
+* Once a pull request is made, voting will occur for a minimum of 7 business days.
 * During voting, any `-1` votes require the voting party to identify the reason for their vote and engage with the change seeking party to resolve.
 * The change will be adopted only with a minimum of three `+1` votes and no outstanding `-1` votes. If the adoption threshold is not met at the end of day 7, the voting process continues until the threshold is met or the initiating party withdraws their pull request.
 
