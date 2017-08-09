@@ -76,8 +76,6 @@ _Only files unique to GTFS-ride are defined below. Definitions for all other fil
 
 File: **Optional**
 
-If an agency collects disaggregate, stop-level ridership data,  [board_alight.txt](#board_alighttxt) may be used to record ridership boarding counts and additional supplementary data. If only more aggregate ridership data is collected, the agency should use [ridership.txt](#ridershiptxt) to record ridership counts.  It should be noted that unique combinations of **stop_id** and **trip_id** will not uniquely define a specific instance in time of arrival and boardings at a stop. Boardings and other counts will be aggregated across dates active as defined by a trip’s **service_id**. By including an optional timestamp, an agency can disaggregate counts to specifics instances of stop arrivals and boardings, and provide a calculated current load.
-
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
 | trip_id | **Required** | The **trip_id** contains an ID that uniquely identifies a trip. |
@@ -126,8 +124,6 @@ If an agency collects disaggregate, stop-level ridership data,  [board_alight.tx
 
 File: **Optional**
 
-The [trip_capacity.txt](#trip_capacitytxt) file identifies the capacity of a vehicle operating a trip on a given day to support crowding analysis in conjunction with [board_alight.txt](#board_alighttxt).
-
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
 | agency_id | Optional | The **agency_id** field contains the ID of the agency associated with the capacity data. This value is referenced from the [agency.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#agencytxt) file. Use this field when you are providing data from more than one agency.  |
@@ -142,8 +138,6 @@ The [trip_capacity.txt](#trip_capacitytxt) file identifies the capacity of a veh
 ### *__rider_trip.txt__*
 
 File: **Optional**
-
-If an agency can associate supplementary ridership data with a specific rider, [rider_trip.txt](#rider_triptxt) may be used to record the rider-generated details. Care should be exercised in the creation of the **rider_id** field to sufficiently anonymize a rider’s identity. The [rider_trip.txt](#rider_triptxt) file may be useful for origin/destination, rider demographic, fare structure, network configuration, transit equity, demand forecasting, and performance review studies. 
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
@@ -205,8 +199,6 @@ If an agency can associate supplementary ridership data with a specific rider, [
 
 File: **Optional**
 
-An agency may use the [ridership.txt](#ridershiptxt) file to record aggregate level ridership counts depending on agency capabilities and requirements.  If stop-level ridership counts are available, they should be recorded in [board_alight.txt](#board_alighttxt), but an agency may choose to also record the aggregated counts in [ridership.txt](#ridershiptxt) to aid in meeting specific reporting requirements or in generating user-defined reports. Many levels of specificity of aggregation are available through the many possible combinations of ID, time, and date fields. 
-
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
 | total_boardings | **Required** | The **total_boardings** field contains the total count (not a daily average) of all boardings for the identified service or stops for the period indicated. A record without a **stop_id** should have both **total_boardings** and **total_alightings**, and they should be equal; a record with a **stop_id** must have at least one of the two. Non-negative integer. |
@@ -246,8 +238,6 @@ An agency may use the [ridership.txt](#ridershiptxt) file to record aggregate le
 ### *__ride_feed_info.txt__*
 
 File: **Required**
-
-This file is similar to the GTFS  [feed_info.txt](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#feed_infotxt), but with a specific focus on metadata for the additional ridership files.
 
 |  Field Name | Required | Details |
 |  ------ | ------ | ------ |
