@@ -2,4 +2,4 @@
 
 ### Testing Your GTFS-ride Dataset:
 
-An open source validation tool will be available for testing datasets in the GTFS-ride format. The tool is still under development, and it not currently released.
+[feedvalidator_ride](https://github.com/ODOT-PTS/transitfeed-ride) is available to validate GTFS-ride filesets. The tool functions in the same manner as GTFS [feedvalidator tool](https://github.com/google/transitfeed/wiki/FeedValidator), but has been modified to additionally validate GTFS-ride files.
