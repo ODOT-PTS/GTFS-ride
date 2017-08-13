@@ -5,6 +5,9 @@ GTFS-ride is a new data standard looking to meet the needs of transit organizati
 ## Quarterly reviews
 GTFS-ride is dependent upon filesets created using the [GTFS specification](https://github.com/google/transit/tree/master/gtfs). Due to that dependency, quarterly reviews on the first business day of January, April, July, and October will occur to ensure ongoing compatibility. Any changes as a result of the review will be identified in the [Changelog](CHANGES.md#changelog).
 
+## Discussion
+Any modification to GTFS-ride may be discussed in the [GTFS-ride Changes Google Group](https://groups.google.com/forum/#!forum/gtfs-ride-changes). While starting a new topic discussing the desired change is not required for the change process, feedback received may ease the change's approval. 
+
 ## Initiated changes
 There are multiple reasons why a change to GTFS-ride may occur: security vulnerability, usability defect, or new/improved feature sought. Depending on the change immediacy and method of change, the specification modification process will vary.
 
@@ -13,7 +16,7 @@ There are multiple reasons why a change to GTFS-ride may occur: security vulnera
 * If a change is desired, and the exact change to the code is known, a branch should be created implementing the change where applicable (i.e. documentation, specification, etc.). The initiator of the change will create a pull request for the modified branch.
 
 ### Pull request
-* Once a pull request is made, voting will occur for a minimum of 7 business days.
+* Once a pull request is made, voting will occur for a minimum of 7 business days, and a new topic announcing the pull request must be posted to the [GTFS-ride Changes Google Group](https://groups.google.com/forum/#!forum/gtfs-ride-changes) the same day.
 * During voting, any `-1` votes require the voting party to identify the reason for their vote and engage with the change seeking party to resolve.
 * The change will be adopted only with a minimum of three `+1` votes and no outstanding `-1` votes. If the adoption threshold is not met at the end of day 7, the voting process continues until the threshold is met or the initiating party withdraws their pull request.
 
