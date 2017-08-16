@@ -26,4 +26,4 @@ There are multiple reasons why a change to GTFS-ride may occur: security vulnera
 
 # Changelog
 
-* `August 9, 2017` - Initial release.
+* `August 16, 2017` - Initial release.
