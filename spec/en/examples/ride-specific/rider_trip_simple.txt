@@ -1,0 +1,3 @@
+rider_id,boarding_stop_id,boarding_stop_sequence,alighting_stop_id,alighting_stop_sequence
+R1,S_A,1,S_C,3
+R2,S_D,1,S_B,3

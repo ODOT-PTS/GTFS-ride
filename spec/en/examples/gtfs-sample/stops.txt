@@ -1,0 +1,5 @@
+stop_id,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url
+S_A,Stop A,,44.577330406,-123.262564056,,
+S_B,Stop B,,44.576061168,-123.263289933,,
+S_C,Stop C,,44.579153453,-123.262475070,,
+S_D,Stop D,,44.577981724,-123.262629636,,

@@ -1,0 +1,9 @@
+trip_id,stop_id,stop_sequence,record_use,boardings
+T1,S_A,1,0,5
+T1,S_B,2,0,3
+T1,S_C,3,0,2
+T1,S_D,4,0,0
+T2,S_C,2,0,1
+T2,S_D,1,0,4
+T2,S_B,3,0,2
+T2,S_A,4,0,1

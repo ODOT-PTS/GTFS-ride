@@ -1,0 +1,2 @@
+feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version
+GTFS-ride Transit,https://github.com/ODOT-PTS/GTFS-ride/,en,20100101,20101231,1.2.15

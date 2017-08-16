@@ -1,0 +1,3 @@
+agency_id,trip_id,service_date,vehicle_description,seated_capacity,standing_capacity,wheelchair_capacity,bike_capacity
+RIDE,T1,20100401,”Big Blue Bus”,75,25,4,12
+RIDE,T2,20101031,”Orange and Black Bus”,15,80,6,18
