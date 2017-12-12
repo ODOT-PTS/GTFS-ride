@@ -27,3 +27,5 @@ There are multiple reasons why a change to GTFS-ride may occur: security vulnera
 # Changelog
 
 * `September 6, 2017` - Initial release.
+* `January 1, 2018` - Quarterly review and new elements.
+  * Added `load_count` to `board_alight.txt`
