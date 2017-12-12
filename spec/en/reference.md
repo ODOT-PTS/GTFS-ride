@@ -96,8 +96,9 @@ File: **Optional**
 |   |  | * **8** - This **stop_time** was added to a scheduled trip, replacing something cancelled.    |
 | boardings | Optional | The **boardings** field contains the number of boardings at (or nearest to, in the case of boardings between stops ) the associated **stop_id** as collected by either automated or manual methods. Non-negative integer. |
 | alightings | Optional | The **alightings** field contains the number of alightings at (or nearest to, in the case of alightings between stops) the associated **stop_id** as collected by either automated or manual methods. Non-negative integer. |
-| current_load | Optional | The **current_load** field contains the calculated percentage current load of a vehicle at the identified stop. The state at which **current_load** is measured, is specified by **load_type**; if no value is given in **load_type**, **current_load** is arriving load.  Non-negative integer.|
-| load_type | Optional | The **load_type** field specifies the state (arriving or departing) at which **current_load** is measured. If no value is given, **current_load** indicates arriving load |
+| current_load | Optional | The **current_load** field contains the calculated percentage current load of a vehicle at the identified stop. **load_type** specifies the state at which **current_load** is measured; if no value is given in **load_type**, **current_load** is arriving load.  Non-negative integer.|
+| load_count | Optional | The **load_count** field contains the count of the number of riders onboard a vehicle at the identified stop. **load_type** specifies the state at which **load_count** is measured; if no value is given in **load_type**, **load_count** is arriving count.  Non-negative integer.
+| load_type | Optional | The **load_type** field specifies the state (arriving or departing) at which **current_load** and/or **load_count** is measured. |
 |   |  | * **0** - Arriving.  |
 |   |  | * **1** - Departing.  |
 | rack_down | Optional | The **rack_down** field indicates whether an external bike rack was deployed or remained down at the associated **stop_id**. This field should be used in conjunction with **bike_boardings** and **bike_alightings** if complete bike boarding and alighting counts are available. |
