@@ -17,6 +17,7 @@ There are multiple reasons why a change to GTFS-ride may occur: security vulnera
 
 ### Pull request
 * Once a pull request is made, voting will occur for a minimum of 7 business days, and a new topic announcing the pull request must be posted to the [GTFS-ride Changes Google Group](https://groups.google.com/forum/#!forum/gtfs-ride-changes) the same day.
+* Voting shall occur on the pull request by leaving a comment that begins with either `+1` to support or `-1` to not support the change in its current form. The submitter of a pull request may not vote on their own change.
 * During voting, any `-1` votes require the voting party to identify the reason for their vote and engage with the change seeking party to resolve.
 * The change will be adopted only with a minimum of three `+1` votes and no outstanding `-1` votes. If the adoption threshold is not met at the end of day 7, the voting process continues until the threshold is met or the initiating party withdraws their pull request.
 
