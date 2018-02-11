@@ -1,6 +1,6 @@
 The repository contains specification and tools to manipulate GTFS-ride, an open ridership data standard.
 
-Please visit https://github.com/ODOT-PTS/GTFS-ride/wiki for information.
+Please visit http://wiki.gtfs-ride.org/ for information.
 
 ### Quick links
 - [Documentation](spec/en)
