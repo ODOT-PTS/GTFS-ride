@@ -31,3 +31,4 @@ There are multiple reasons why a change to GTFS-ride may occur: security vulnera
 * `January 1, 2018` - Quarterly review and new elements.
   * Added `load_count` to `board_alight.txt`
 * `April 1, 2018` - Quarterly review.
+* `July 1, 2018` - Quarterly review.
