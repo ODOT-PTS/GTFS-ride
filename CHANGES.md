@@ -33,3 +33,4 @@ There are multiple reasons why a change to GTFS-ride may occur: security vulnera
 * `April 1, 2018` - Quarterly review.
 * `July 1, 2018` - Quarterly review.
 * `October 1, 2018` - Quarterly review.
+* `January 1, 2020` - Quarterly review.
