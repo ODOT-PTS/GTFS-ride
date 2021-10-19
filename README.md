@@ -1,7 +1,6 @@
-The repository contains specification and tools to manipulate GTFS-ride, an open ridership data standard.
-
-Please visit http://wiki.gtfs-ride.org/ for information.
+The repository contains specification for GTFS-ride, an open standard for storing and sharing fixed-route transit ridership data.
 
 ### Quick links
 - [Documentation](spec/en)
+- [Project Website](https://gtfs-ride.org)
 - [How to change the specification?](CHANGES.md)
