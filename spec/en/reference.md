@@ -1,20 +1,8 @@
-## GTFS-ride
+# GTFS-ride Specification
 
-**Current version published `January 1, 2018`. See [Revision History](../../CHANGES.md) for more details.**
+**Current version published `January 1, 2018`. See [Revision History](https://github.com/ODOT-PTS/GTFS-ride/CHANGES.md) for more details.**
 
 This document explains the types of files that comprise a GTFS-ride dataset and defines the fields used in all of those files. The bolded files are those unique to GTFS-ride. They are not included in standard GTFS.
-
-## Table of Contents
-
-1.  [Term Definitions](#term-definitions)
-2.  [Feed Files](#feed-files)
-3.  [File Requirements](#file-requirements)
-4.  [Field Definitions](#field-definitions)
-    -   [*__board\_alight.txt__*](#board_alighttxt)
-    -   [*__trip\_capacity.txt__*](#trip_capacitytxt )
-    -   [*__rider\_trip.txt__*](#rider_triptxt)
-    -   [*__ridership.txt__*](#ridershiptxt)
-    -   [*__ride\_feed\_info.txt__*](#ride_feed_infotxt)
 
 ## Term Definitions
 _Retrieved from GTFS [https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md)_
