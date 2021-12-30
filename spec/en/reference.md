@@ -1,6 +1,6 @@
 # GTFS-ride Specification
 
-**Current version published `January 1, 2018`. See [Revision History](https://github.com/ODOT-PTS/GTFS-ride/CHANGES.md) for more details.**
+**Current version published `January 1, 2018`. See [Revision History](https://github.com/ODOT-PTS/GTFS-ride/blob/master/CHANGES.md) for more details.**
 
 This document explains the types of files that comprise a GTFS-ride dataset and defines the fields used in all of those files. The bolded files are those unique to GTFS-ride. They are not included in standard GTFS.
 
